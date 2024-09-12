@@ -12,7 +12,7 @@
 */
 
 // Увімкнути/вимкнути FLS (Full Logging System) (в роботі)
-window['FLS'] = true;
+window["FLS"] = true;
 
 // Підключення основного файлу стилів
 import "../scss/style.scss";
@@ -123,7 +123,7 @@ flsForms.formFieldsInit({
 // flsForms.formQuantity();
 
 /* Модуль зіркового рейтингу */
-// flsForms.formRating();
+flsForms.formRating();
 
 /* Модуль роботи з select. */
 // import './libs/select.js'

@@ -3,12 +3,41 @@
 
 .button {
 	display: inline-flex;
-	padding: 0px 0px;
+	padding: toRem(15) toRem(68);
+	background-color: $mainColor;
+	border-radius: toRem(62);
+	font-weight: 500;
+	line-height: 137.5%;
+	/* 22/16 */
+	color: #fff;
+	transition: all 0.4s;
+
 	@media (any-hover: hover) {
 		&:hover {
+			background-color: $base;
+			color: $mainColor;
+			box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
 		}
 	}
+
 	&--fw {
 		width: 100%;
+	}
+
+	// .button--white
+	&--white {
+		width: 100%;
+		padding-block: toRem(12);
+		background-color: #fff;
+		color: $mainColor;
+		text-align: center;
+		transition: text-decoration 0.4s;
+
+
+		@media (any-hover: hover) {
+			&:hover {
+				text-decoration: underline;
+			}
+		}
 	}
 }

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"CommonPage"
+})
+
+<body>
+  <div class="wrapper">
+    <main class="page">
+
+      <article class="item-product">
+        <a href="#" class="item-product__link">
+          <img class="item-product__image" src="@img/arrivals/image_01.png" alt="Image 01">
+        </a>
+        <div class="item-product__content">
+          <h4 class="item-product__title">
+            <a href="#" class="item-product__title-link">t-shirt <span>with</span> tape details</a>
+          </h4>
+          <div class="item-product__opinion opinion">
+            <div data-rating="set" data-rating-size="4" class="opinion__rating rating _icon-star_05"></div>
+            <div class="opinion__number">4.5/5</div>
+          </div>
+        </div>
+        <div class="item-product__price price-product">
+          <div class="price-product__current">$240</div>
+          <div class="price-product__old">$260</div>
+          <div class="price-product__persent">-20%</div>
+        </div>
+      </article>
+
+      <button class="button" type="button">Shop Now</button>
+
+      <form class="offers" action="#" enctype="multipart/form-data">
+        <h2 class="offers__title title title--white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+        <div class="offers__form">
+          <div class="offers__body">
+            <input autocomplete="off" type="email" name="form[mail]" data-error="Помилка" placeholder="Enter your email address" class="offers__input input input--white">
+            <span class="offers__icon _icon-envelope"></span>
+          </div>
+          <button class="offers__button button button--white" type="submit">Subscribe to Newsletter</button>
+        </div>
+      </form>
+
+      <div class="review">
+        <div class="review__wrapper">
+          <div class="review__body">
+            <div class="review__raiting-stars stars-raiting">
+              <div class="stars-raiting__star"></div>
+              <div class="stars-raiting__star"></div>
+              <div class="stars-raiting__star"></div>
+              <div class="stars-raiting__star"></div>
+              <div class="stars-raiting__star"></div>
+            </div>
+            <div class="review__user-name _icon-ok">Sarah M.</div>
+            <div class="review__text">
+              <p>
+                "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+              </p>
+              <p>
+                "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+              </p>
+            </div>
+          </div>
+          <time class="review__date" datetime="16.08.2023">
+            <span>Posted on</span> August 16, 2023
+          </time>
+        </div>
+      </div>
+    </main>
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -1,1 +1,301 @@
 // Заголовки, загальні БЕМ блоки та інше...
+
+.page {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(15);
+}
+
+//==================================================================item-product
+.item-product {
+  display: flex;
+  flex-direction: column;
+
+  // .item-product__link
+  &__link {
+    display: block;
+    overflow: hidden;
+    border-radius: toRem(20);
+    background: $bgColor;
+    margin-block-end: toRem(16);
+    transition: transform 0.4s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        .item-product__image {
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+
+  // .item-product__image
+  &__image {
+    aspect-ratio: 295 / 298;
+    object-fit: cover;
+    inline-size: 100%;
+  }
+
+  // .item-product__content
+  &__content {
+    flex-grow: 1;
+  }
+
+  // .item-product__title
+  &__title {
+    font-size: toRem(20);
+    font-weight: 700;
+    text-transform: capitalize;
+    margin-block-end: toRem(8);
+
+    @media (any-hover: hover) {
+      &:hover {
+        .item-product__title-link {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // .item-product__title-link
+  &__title-link {
+    span {
+      text-transform: lowercase;
+      transition: text-decoration 0.4s;
+    }
+  }
+
+  // .item-product__opinion
+  &__opinion {
+    margin-block-end: toRem(8);
+  }
+
+  // .item-product__price
+  &__price {}
+}
+
+.opinion {
+  display: inline-flex;
+  align-items: center;
+  column-gap: toRem(13);
+
+  // .opinion__rating
+  &__rating {
+    display: flex;
+    align-items: center;
+    row-gap: toRem(5);
+    flex-direction: row-reverse;
+
+    &::before {
+      inline-size: toRem(9);
+      block-size: toRem(18);
+      font-size: toRem(18);
+      flex-shrink: 0;
+      color: $yelowColor;
+    }
+  }
+
+  // .opinion__number
+  &__number {
+    font-size: toRem(14);
+  }
+}
+
+.price-product {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(10);
+
+  // .price-product__current
+  &__current {
+    font-size: toRem(24);
+    line-height: 133.333333%;
+    /* 32/24 */
+    font-weight: 700;
+  }
+
+  // .price-product__old
+  &__old {
+    font-size: toRem(24);
+    line-height: 133.333333%;
+    /* 32/24 */
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.40);
+    text-decoration: line-through;
+  }
+
+  // .price-product__persent
+  &__persent {
+    flex-basis: toRem(58);
+    flex-shrink: 0;
+    inline-size: toRem(58);
+    color: $redColor;
+    font-size: toRem(12);
+    line-height: 133.333333%;
+    /* 16/12 */
+    font-weight: 500;
+    background-color: rgba(255, 51, 51, 0.10);
+    border-radius: toRem(62);
+    padding: toRem(6) toRem(14);
+  }
+}
+
+//=================================================================//==Form-offers
+.offers {
+  background-color: $mainColor;
+  border-radius: toRem(20);
+  padding: toRem(36) toRem(64);
+  display: flex;
+  column-gap: toRem(40);
+  align-items: center;
+  justify-content: space-between;
+
+
+  // .offers__title
+  &__title {}
+
+  // .offers__form
+  &__form {
+    min-inline-size: toRem(320);
+  }
+
+  // .offers__body
+  &__body {
+    position: relative;
+  }
+
+  // .offers__input
+  &__input {
+    &:not(:last-child) {
+      margin-block-end: toRem(14);
+    }
+  }
+
+  // .offers__icon
+  &__icon {
+    position: absolute;
+    inset-block-start: toRem(12);
+    inset-inline-start: toRem(16);
+
+    &::before {
+      inline-size: toRem(24);
+      block-size: toRem(24);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      color: rgba(0, 0, 0, 0.40);
+      font-size: toRem(20);
+      font-weight: 500;
+    }
+  }
+
+  // .offers__button
+  &__button {}
+}
+
+//=================================================================
+//===Title
+.title {
+  font-family: 'IntegralCF', sans-serif;
+  font-size: toRem(48);
+  font-weight: 700;
+  line-height: 1.208333;
+  /* 58/48 */
+
+  // .title--lh
+  &--white {
+    font-size: toRem(40);
+    line-height: 1.125;
+    /* 45/40 */
+    color: #fff;
+  }
+}
+
+
+//=================================================================
+//===Review
+.review {
+  padding: toRem(28) toRem(32);
+  border-radius: toRem(20);
+  border: toRem(1) solid rgba(0, 0, 0, 0.10);
+
+  // .review__wrapper
+  &__wrapper {}
+
+
+  // .review__body
+  &__body {
+    display: flex;
+    flex-direction: column;
+    row-gap: toRem(15);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(24);
+    }
+  }
+
+  // .review__raiting-stars
+  &__raiting-stars {}
+
+  // .review__user-name
+  &__user-name {
+    align-self: flex-start;
+    font-size: toRem(20);
+    font-weight: 700;
+    line-height: 1.1;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    column-gap: toRem(4.5);
+
+    /* 22/20 */
+    &::before {
+      inline-size: toRem(24);
+      flex-basis: toRem(24);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(23);
+      color: $greenColor;
+    }
+  }
+
+  // .review__text
+  &__text {
+    flex-grow: 1;
+
+    p {
+      color: rgba(0, 0, 0, 0.60);
+      line-height: 1.375;
+
+      /* 22/16 */
+      &:not(:last-child) {
+        margin-block-end: toRem(5);
+      }
+    }
+  }
+
+  // .review__data  
+  &__date {
+    color: rgba(0, 0, 0, 0.60);
+    line-height: 1.375;
+    font-weight: 500;
+  }
+}
+
+.stars-raiting {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(6.4);
+
+  // .stars-raiting__star
+  &__star {
+    background: url('../img/iconfonts/star_1.svg') 0 0 / 100% no-repeat;
+    inline-size: toRem(23);
+    flex-basis: toRem(23);
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+  }
+}

@@ -8,22 +8,47 @@ textarea {
 	-moz-appearance: none;
 	appearance: none;
 }
+
 .input {
-	border-radius: 0 !important;
+	//border-radius: 0 !important;
 	width: 100%;
 	display: block;
-	padding: 0px 20px;
-	border: 1px solid #eee;
+	padding: 12px 16px;
+	// border: 1px solid #eee;
 	caret-color: inherit;
-	&._form-focus {
-	}
-	&._form-error {
+
+	&._form-focus {}
+
+	&._form-error {}
+
+	&--white {
+		position: relative;
+		display: inline-flex;
+		align-items: center;
+		flex-shrink: 0;
+		column-gap: toRem(12);
+		background-color: #fff;
+		border-radius: toRem(62);
+		padding: toRem(12) toRem(16) toRem(12) toRem(52);
+
+		&::before {
+			position: absolute;
+			inset-block-start: 0;
+			inset-inline-start: 0;
+			inline-size: toRem(24);
+			flex-basis: toRem(24);
+			flex-shrink: 0;
+			color: hwb(0 0% 100% / 0.40);
+			font-size: toRem(20);
+		}
 	}
 }
+
 .input[placeholder]:not([data-placeholder-nohiden]) {
 	&::placeholder {
 		transition: opacity 0.3s;
 	}
+
 	&:focus::placeholder {
 		opacity: 0;
 	}

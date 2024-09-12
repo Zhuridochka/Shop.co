@@ -1,3 +1,11 @@
+@font-face {
+	font-family: icons;
+	font-display: swap;
+	src: url("../fonts/icons.woff2") format("woff2");
+	font-weight: 400;
+	font-style: normal;
+}
+
 %ic {
 	font-family: "icons";
 	font-style: normal;
@@ -8,8 +16,81 @@
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
+
 [class*="_icon-"] {
 	&::before {
 		@extend %ic;
 	}
+}
+
+._icon-s-facebook:before {
+	content: "\e900";
+}
+
+._icon-s-github:before {
+	content: "\e901";
+}
+
+._icon-s-insta:before {
+	content: "\e902";
+}
+
+._icon-s-twitter:before {
+	content: "\e903";
+}
+
+._icon-arrow-right:before {
+	content: "\e904";
+}
+
+._icon-bag:before {
+	content: "\e905";
+}
+
+._icon-cart:before {
+	content: "\e906";
+}
+
+._icon-chek-mark:before {
+	content: "\e907";
+}
+
+._icon-close:before {
+	content: "\e908";
+}
+
+._icon-envelope:before {
+	content: "\e909";
+}
+
+._icon-filter:before {
+	content: "\e90a";
+}
+
+._icon-Frame:before {
+	content: "\e90b";
+}
+
+._icon-ok:before {
+	content: "\e90c";
+}
+
+._icon-search:before {
+	content: "\e90d";
+}
+
+._icon-star_1:before {
+	content: "\e90e";
+}
+
+._icon-star_05:before {
+	content: "\e90f";
+}
+
+._icon-user:before {
+	content: "\e910";
+}
+
+._icon-vector:before {
+	content: "\e911";
 }
