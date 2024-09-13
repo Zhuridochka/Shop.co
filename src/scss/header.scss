@@ -1,0 +1,238 @@
+.header {
+
+  // .header__top
+  &__top {}
+
+  // .header__main
+  &__main {}
+}
+
+.top-header {
+  background-color: $mainColor;
+  position: relative;
+  z-index: 3;
+
+  // .top-header__container
+  &__container {}
+
+  // .top-header__box
+  &__box {
+    padding-block-start: toRem(9);
+    padding-block-end: toRem(10);
+
+    @media (max-width:$mobile) {
+      padding-block-end: toRem(9);
+    }
+  }
+
+  // .top-header__column
+  &__column {
+    @media (max-width:$mobile) {
+      display: none;
+    }
+  }
+
+  // .top-header__content
+  &__content {
+    color: #fff;
+    font-size: toRem(14);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(10);
+
+    @media (max-width:$mobile) {
+      font-size: toRem(12);
+      justify-content: center;
+    }
+  }
+
+  // .top-header__text
+  &__text {
+    @media (max-width:$mobile) {}
+  }
+
+  // .top-header__button
+  &__button {
+    text-decoration: underline;
+    transition: color 0.4s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffffffbb;
+      }
+    }
+  }
+
+  // .top-header__icon  
+  &__icon {
+    justify-self: flex-end;
+
+    @media (max-width:$mobile) {
+      display: none;
+    }
+  }
+
+}
+
+.main-header {
+  position: relative;
+  z-index: 2;
+
+  // .main-header__container
+  &__container {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(40);
+    padding-block: toRem(24);
+
+    @media (max-width:$tablet) {
+      column-gap: toRem(20);
+    }
+
+    @media (max-width:$mobileSmall) {
+      justify-content: space-between;
+    }
+  }
+
+  // .main-header__icon  
+  &__icon {}
+
+  // .main-header__logo
+  &__logo {
+    font-family: 'IntegralCF', sans-serif;
+    font-size: toRem(32);
+    font-weight: 700;
+    margin-block-start: toRem(-8);
+
+    @media (max-width:$mobile) {
+      font-size: toRem(28);
+      margin-block-start: toRem(-6);
+      position: relative;
+      z-index: 5;
+    }
+  }
+
+  // .main-header__menu
+  &__menu {}
+
+  // .main-header__search
+  &__search {}
+
+  // .main-header__actions
+  &__actions {}
+}
+
+.search-header {
+  flex-grow: 1;
+  position: relative;
+
+  @media (max-width:$mobileSmall) {
+    flex-grow: 0;
+  }
+
+  // .search-header__open  
+  &__open {
+    display: none;
+
+    @media (max-width:$mobileSmall) {
+      display: flex;
+      block-size: toRem(24);
+      aspect-ratio: 1;
+      flex-shrink: 0;
+      position: relative;
+    }
+
+    span {
+      padding-block-start: toRem(2);
+      aspect-ratio: 1;
+      position: absolute;
+      inset-block-start: 50%;
+      inset-inline-start: 50%;
+      transform: translate(-50%, -50%);
+
+      &::before {
+        font-size: toRem(21);
+      }
+
+      &:first-child {}
+
+      &:last-child {
+        transform: translate(-50%, -50%) scale(0);
+      }
+
+      .search-open & {
+        &:first-child {
+          transform: translate(-50%, -50%) scale(0);
+        }
+
+        &:last-child {
+          transform: translate(-50%, -50%) scale(1);
+        }
+      }
+    }
+  }
+
+  // .search-header__body
+  &__body {
+    border-radius: toRem(62);
+    background-color: #F0F0F0;
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+    flex-direction: row-reverse;
+    padding-block: toRem(12);
+    padding-inline: toRem(16);
+
+    @media (max-width:$mobile) {
+      padding-block: toRem(4);
+      padding-inline: toRem(12);
+    }
+
+    @media (max-width:$mobileSmall) {
+      display: none;
+
+    }
+  }
+
+  // .search-header__input
+  &__input {}
+
+  // .search-header__button
+  &__button {
+    inline-size: toRem(24);
+    flex-basis: toRem(24);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    font-size: toRem(21);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(0, 0, 0, 0.4);
+  }
+}
+
+.actions-header {
+  display: flex;
+  align-items: center;
+  column-gap: toRem(14);
+  position: relative;
+  z-index: 5;
+
+  // .actions-header__item
+  &__item {
+    display: flex;
+
+    &::before {
+      inline-size: toRem(24);
+      flex-basis: toRem(24);
+      aspect-ratio: 1;
+      flex-shrink: 0;
+      font-size: toRem(21);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+}
