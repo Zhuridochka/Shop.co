@@ -1,5 +1,4 @@
 // Підключення функціоналу "Чертоги Фрілансера"
-import { log } from "gulp-util";
 import { isMobile } from "./functions.js";
 // Підключення списку активних модулів
 import { flsModules } from "./modules.js";
@@ -34,7 +33,7 @@ function windowLoaded() {
     const menuBody = document.querySelector(".menu__body");
 
     if (window.innerWidth < 767.98) {
-      menuBody.style.paddingBlockStart = `${headerHeight + 20}px`;
+      menuBody.style.paddingTop = `${headerHeight + 10}px`;
     }
   }
 
