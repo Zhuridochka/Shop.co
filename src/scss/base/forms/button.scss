@@ -3,7 +3,7 @@
 
 .button {
 	display: inline-flex;
-	padding: toRem(15) toRem(68);
+	padding: toRem(16) toRem(54);
 	background-color: $mainColor;
 	border-radius: toRem(62);
 	font-weight: 500;
@@ -27,12 +27,12 @@
 	// .button--white
 	&--white {
 		width: 100%;
+		// display: inline-flex;
+		justify-content: center;
 		padding-block: toRem(12);
 		background-color: #fff;
 		color: $mainColor;
-		text-align: center;
 		transition: text-decoration 0.4s;
-
 
 		@media (any-hover: hover) {
 			&:hover {
