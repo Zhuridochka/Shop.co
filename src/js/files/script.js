@@ -39,6 +39,20 @@ function windowLoaded() {
 
   updateHeaderHeight();
 
+  function removeClassOnSmallScreens() {
+    const imageElement = document.querySelector(".hero__image-bg");
+
+    if (window.innerWidth < 992) {
+      // Якщо ширина екрану менша за 992px, видаляємо клас .ibg--top
+      imageElement.classList.remove("ibg--top");
+      imageElement.classList.add("ibg--right");
+    } else {
+      // Якщо ширина екрану більша за 992px, повертаємо клас .ibg--top (якщо потрібно)
+      imageElement.classList.add("ibg--top");
+      imageElement.classList.remove("ibg--right");
+    }
+  }
+  window.addEventListener("resize", removeClassOnSmallScreens);
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
 }

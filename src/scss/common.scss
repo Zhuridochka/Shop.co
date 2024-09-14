@@ -1,9 +1,5 @@
 // Заголовки, загальні БЕМ блоки та інше...
 
-.page>* {
-  margin-block-end: toRem(20);
-}
-
 //=====Logo
 .logo {
   font-family: 'IntegralCF', sans-serif;
@@ -223,6 +219,11 @@
     line-height: 1.125;
     /* 45/40 */
     color: #fff;
+  }
+
+  &--big {
+    line-height: 1;
+    @include adaptiveValue("font-size", 64, 32, 0, 1440, 390);
   }
 }
 
