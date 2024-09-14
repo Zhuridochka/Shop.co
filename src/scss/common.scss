@@ -4,7 +4,23 @@
   margin-block-end: toRem(20);
 }
 
-//==================================================================item-product
+//=====Logo
+.logo {
+  font-family: 'IntegralCF', sans-serif;
+  font-size: toRem(32);
+  font-weight: 700;
+  margin-block-start: toRem(-8);
+
+  @media (max-width:$mobile) {
+    font-size: toRem(28);
+    margin-block-start: toRem(-6);
+    position: relative;
+    z-index: 5;
+  }
+}
+
+//==================================================================
+//===item-product
 .item-product {
   display: flex;
   flex-direction: column;

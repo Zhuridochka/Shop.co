@@ -100,19 +100,7 @@
   &__icon {}
 
   // .main-header__logo
-  &__logo {
-    font-family: 'IntegralCF', sans-serif;
-    font-size: toRem(32);
-    font-weight: 700;
-    margin-block-start: toRem(-8);
-
-    @media (max-width:$mobile) {
-      font-size: toRem(28);
-      margin-block-start: toRem(-6);
-      position: relative;
-      z-index: 5;
-    }
-  }
+  &__logo {}
 
   // .main-header__menu
   &__menu {}
