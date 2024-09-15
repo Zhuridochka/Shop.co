@@ -8,7 +8,7 @@
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<div class="page__hero hero">
+			<section class="page__hero hero">
 				<div class="hero__container">
 					<div class="hero__content">
 						<h1 class="hero__title title title--big">FIND CLOTHES THAT MATCHES YOUR STYLE</h1>
@@ -43,6 +43,32 @@
 					</div> -->
 				</div>
 				<img class="hero__image-bg ibg ibg--top" src="@img/hero/group_bg.png" alt="Image background">
+			</section>
+			<div class="page__brands brands">
+				<div class="brands__container">
+					<div class="brands__items">
+						<picture>
+							<source media="(max-width: 530px)" srcset="@img/brands/brand_01_small.svg">
+							<img class="brands__image" src="@img/brands/brand_01.svg" alt="Logo VERSACE">
+						</picture>
+						<picture>
+							<source media="(max-width: 530px)" srcset="@img/brands/brand_02_small.png">
+							<img class="brands__image" src="@img/brands/brand_02.svg" alt="Logo ZARA">
+						</picture>
+						<picture>
+							<source media="(max-width: 530px)" srcset="@img/brands/brand_03_small.png">
+							<img class="brands__image" src="@img/brands/brand_03.svg" alt="Logo GUCCI">
+						</picture>
+						<picture>
+							<source media="(max-width: 530px)" srcset="@img/brands/brand_04_small.png">
+							<img class="brands__image" src="@img/brands/brand_04.svg" alt="Logo PRADA">
+						</picture>
+						<picture>
+							<source media="(max-width: 530px)" srcset="@img/brands/brand_05_small.png">
+							<img class="brands__image" src="@img/brands/brand_05.svg" alt="Logo Calvin Klien">
+						</picture>
+					</div>
+				</div>
 			</div>
 		</main>
 		@@include('html/_footer.htm',{})

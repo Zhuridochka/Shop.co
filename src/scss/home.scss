@@ -3,11 +3,13 @@
 
   // .page__hero
   &__hero {}
+
+  // .page__brands    
+  &__brands {}
 }
 
 //====================================================================================================
 //===Hero
-
 .hero {
   min-height: 100vh;
   position: relative;
@@ -162,4 +164,41 @@
   @media (max-width: toEm(535)) {
     padding-inline: toRem(29);
   }
+}
+
+//====================================================================================================
+//===Brands
+.brands {
+  background-color: $mainColor;
+
+  // .brands__container
+  &__container {}
+
+  // .brands__items
+  &__items {
+    padding-block: toRem(44);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(40);
+    row-gap: toRem(22);
+
+    @media (max-width: toEm(530)) {
+      column-gap: toRem(20);
+      padding-block: toRem(39);
+    }
+  }
+
+  picture {
+    @media (max-width: toEm(530)) {
+      flex-grow: 1;
+      align-self: center;
+      justify-self: center;
+      text-align: center;
+    }
+  }
+
+  // .brands__image  
+  &__image {}
 }
