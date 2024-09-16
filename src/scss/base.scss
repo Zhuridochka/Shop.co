@@ -18,7 +18,7 @@
 // @import "base/maps";
 
 // Стилі блоку "показати ще"
-// @import "base/showmore";
+@import "base/showmore";
 
 // Стилі для липкого блоку
 // @import "base/sticky";
@@ -56,7 +56,11 @@
 	}
 
 	&--right {
-		// object-position: right;
+		object-position: right;
+
+	}
+
+	&--right90 {
 		object-position: 90% 0;
 	}
 

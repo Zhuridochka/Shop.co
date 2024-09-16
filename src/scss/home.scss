@@ -6,6 +6,17 @@
 
   // .page__brands    
   &__brands {}
+
+  // .page__arrivals
+  &__arrivals {}
+
+  // .page__selling
+  &__selling {}
+
+  // .page__style
+  &__style {
+    @include adaptiveValue("margin-block-end", 80, 50, 0, 1440, 390);
+  }
 }
 
 //====================================================================================================
@@ -201,4 +212,203 @@
 
   // .brands__image  
   &__image {}
+}
+
+//====================================================================================================
+//===Arrivals
+.arrivals {
+
+  // .arrivals__container
+  &__container {}
+
+  // .arrivals__body
+  &__body {
+    padding-block-start: toRem(72);
+    padding-block-end: toRem(64);
+
+    @media (max-width: toEm(530)) {
+      padding-block-start: toRem(50);
+      padding-block-end: toRem(40);
+    }
+  }
+
+  // .arrivals__title
+  &__title {
+    text-align: center;
+    @include adaptiveValue("margin-block-end", 55, 32, 0, 1440, 390);
+  }
+
+  // .arrivals__content  
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .arrivals__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    column-gap: toRem(20);
+    row-gap: toRem(24);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(36);
+
+      @media (max-width:$mobile) {
+        margin-block-end: toRem(36);
+      }
+
+      @media (max-width: toEm(390)) {
+        margin-block-end: toRem(24);
+      }
+    }
+
+    @media (max-width: toEm(530)) {
+      margin-inline-end: toRem(-55);
+    }
+  }
+
+  // .arrivals__item
+  &__item {}
+
+  // .arrivals__button-all
+  &__button-all {
+    align-self: center;
+
+    @media (max-width: toEm(530)) {
+      inline-size: 100%;
+    }
+  }
+}
+
+//====================================================================================================
+//===Selling
+.selling {
+
+  // .arrivals__container
+  &__container {}
+
+  // .arrivals__body
+  &__body {
+    border-top: toRem(1) solid rgba(0, 0, 0, 0.10);
+    padding-block-start: toRem(72);
+    padding-block-end: toRem(64);
+
+    @media (max-width: toEm(530)) {
+      padding-block-start: toRem(50);
+      padding-block-end: toRem(40);
+    }
+  }
+
+  // .arrivals__title
+  &__title {
+    text-align: center;
+    @include adaptiveValue("margin-block-end", 55, 32, 0, 1440, 390);
+  }
+
+  // .arrivals__content  
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .arrivals__items
+  &__items {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    column-gap: toRem(20);
+    row-gap: toRem(24);
+
+    &:not(:last-child) {
+      margin-block-end: toRem(36);
+
+      @media (max-width:$mobile) {
+        margin-block-end: toRem(36);
+      }
+
+      @media (max-width: toEm(390)) {
+        margin-block-end: toRem(24);
+      }
+    }
+
+    @media (max-width: toEm(530)) {
+      margin-inline-end: toRem(-55);
+    }
+  }
+
+  // .arrivals__item
+  &__item {}
+
+  // .arrivals__button-all
+  &__button-all {
+    align-self: center;
+
+    @media (max-width: toEm(530)) {
+      inline-size: 100%;
+    }
+  }
+}
+
+//====================================================================================================
+//===Style
+
+.style {
+
+  // .style__container
+  &__container {
+    background-color: $bgMain;
+    border-radius: toRem(40);
+  }
+
+  // .style__title
+  &__title {
+    padding-block-start: toRem(70);
+    text-align: center;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(64);
+    }
+  }
+
+  // .style__body
+  &__body {}
+
+  // .style__items
+  &__items {
+    display: grid;
+    grid-template-columns: 1.583fr 1fr 1.583fr;
+    gap: toRem(20);
+    @include adaptiveValue("padding-inline", 64, 24, 0, 1440, 390);
+    @include adaptiveValue("padding-block-end", 76, 27, 0, 1440, 390);
+
+    @media (max-width:$mobile) {
+      grid-template-rows: auto;
+      grid-auto-rows: auto;
+    }
+  }
+
+  // .style__item
+  &__item {
+
+    @media (min-width:$mobile) {
+
+      &:nth-child(2),
+      &:nth-child(3) {
+        grid-column: span 2;
+        aspect-ratio: 684 / 289;
+        inline-size: 100%;
+      }
+
+      &:nth-child(4n+2),
+      &:nth-child(4n+3) {
+        grid-column: span 2;
+        aspect-ratio: 684 / 289;
+        inline-size: 100%;
+      }
+    }
+
+    @media (max-width:$mobile) {
+      grid-column: span 3;
+    }
+  }
 }
