@@ -17,6 +17,9 @@
   &__style {
     @include adaptiveValue("margin-block-end", 80, 50, 0, 1440, 390);
   }
+
+  // .page__customers  
+  &__customers {}
 }
 
 //====================================================================================================
@@ -351,7 +354,6 @@
 
 //====================================================================================================
 //===Style
-
 .style {
 
   // .style__container
@@ -411,4 +413,75 @@
       grid-column: span 3;
     }
   }
+}
+
+//====================================================================================================
+//===Customers
+.customers {
+  padding-block-end: toRem(80);
+
+  // .customers__container
+  &__container {}
+
+  // .customers__top
+  &__top {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    column-gap: toRem(10);
+    @include adaptiveValue("margin-block-end", 40, 24, 0, 1440, 390);
+  }
+
+  // .customers__title
+  &__title {}
+
+  // .customers__navigation
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(5);
+  }
+
+  &__button-prev,
+  &__button-next {
+    flex-basis: toRem(24);
+    inline-size: toRem(24);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      align-self: center;
+      font-size: toRem(19);
+    }
+  }
+
+  // .customers__button-prev
+  &__button-prev {
+    &::before {
+      transform: rotate(180deg) translate(0, 5%);
+    }
+  }
+
+  // .customers__button-next
+  &__button-next {}
+
+  // .customers__content
+
+  &__content {}
+
+  // .customers__slider
+
+  &__slider {}
+
+  // .customers__wrapper
+
+  &__wrapper {}
+
+  // .customers__slide
+
+  &__slide {}
 }
