@@ -49,20 +49,11 @@ function windowLoaded() {
 
   updateHeightObjects();
 
-  // function updateOffersHeight() {
-  //   const offers = document.querySelector(".offers");
-  //   const offersHeight = offers.offsetHeight;
-  //   const halfOffersHeight = offersHeight / 2;
-  //   const pageOffers = document.querySelector(".page__offers");
-  //   pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
-  // }
-  // updateOffersHeight();
-
   // Функція для додавання технічного класу Image при зміні ширини в'юпорта
   function removeClassOnSmallScreens() {
     const imageElement = document.querySelector(".hero__image-bg");
 
-    if (window.innerWidth < 992) {
+    if (imageElement && window.innerWidth < 992) {
       // Якщо ширина екрану менша за 992px, видаляємо клас .ibg--top
       imageElement.classList.remove("ibg--top");
       imageElement.classList.add("ibg--right90");
@@ -75,15 +66,19 @@ function windowLoaded() {
   // Викликаємо функцію
   removeClassOnSmallScreens();
 
-  // Функція для динамічної зміни data-atribute в залежності від ширини екрану
+  // Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану
   function updateDataAttributeBaseOnHeight() {
     const itemProduct = document.querySelector(".item-product");
     const itemProductHeight = itemProduct.offsetHeight;
     const arrivalsItems = document.querySelector(".arrivals__items");
     const sellingItems = document.querySelector(".selling__items");
+    const likeItems = document.querySelector(".like__items");
 
-    arrivalsItems.dataset.showmoreContent = itemProductHeight;
-    sellingItems.dataset.showmoreContent = itemProductHeight;
+    if (arrivalsItems || sellingItems || likeItems) {
+      arrivalsItems.dataset.showmoreContent = itemProductHeight;
+      sellingItems.dataset.showmoreContent = itemProductHeight;
+      likeItems.dataset.showmoreContent = itemProductHeight;
+    }
   }
   updateDataAttributeBaseOnHeight();
 
