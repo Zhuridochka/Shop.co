@@ -270,7 +270,9 @@
     }
 
     @media (max-width: toEm(530)) {
-      margin-inline-end: toRem(-55);
+      margin-inline-end: toRem(-60);
+      grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+      column-gap: toRem(16);
     }
   }
 
@@ -291,10 +293,10 @@
 //===Selling
 .selling {
 
-  // .arrivals__container
+  // .selling__container
   &__container {}
 
-  // .arrivals__body
+  // .selling__body
   &__body {
     border-top: toRem(1) solid rgba(0, 0, 0, 0.10);
     padding-block-start: toRem(72);
@@ -306,19 +308,19 @@
     }
   }
 
-  // .arrivals__title
+  // .selling__title
   &__title {
     text-align: center;
     @include adaptiveValue("margin-block-end", 55, 32, 0, 1440, 390);
   }
 
-  // .arrivals__content  
+  // .selling__content  
   &__content {
     display: flex;
     flex-direction: column;
   }
 
-  // .arrivals__items
+  // .selling__items
   &__items {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
@@ -338,14 +340,16 @@
     }
 
     @media (max-width: toEm(530)) {
-      margin-inline-end: toRem(-55);
+      margin-inline-end: toRem(-60);
+      grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
+      column-gap: toRem(16);
     }
   }
 
-  // .arrivals__item
+  // .selling__item
   &__item {}
 
-  // .arrivals__button-all
+  // .selling__button-all
   &__button-all {
     align-self: center;
 
@@ -367,24 +371,42 @@
 
   // .style__title
   &__title {
-    padding-block-start: toRem(70);
     text-align: center;
 
     &:not(:last-child) {
       @include adaptiveValue("margin-block-end", 64, 28, 0, 1440, 390);
     }
+
+    @include adaptiveValue("padding-block-start", 70, 40, 0,
+      1440,
+      390);
   }
 
   // .style__body
-  &__body {}
+  &__body {
+    padding-inline: toRem(64);
+
+    @media (max-width:$tablet) {
+      padding-inline: toRem(30);
+    }
+
+    @media (max-width:$mobile) {
+      padding-inline: toRem(20);
+    }
+
+    @media (max-width:$mobileSmall) {
+      padding-inline: toRem(5);
+    }
+
+    // @include adaptiveValue("padding-inline", 64, 24, 0, 1440, 390);
+    @include adaptiveValue("padding-block-end", 76, 27, 0, 1440, 390);
+  }
 
   // .style__items
   &__items {
     display: grid;
     grid-template-columns: 1.583fr 1fr 1.583fr;
     gap: toRem(20);
-    @include adaptiveValue("padding-inline", 64, 24, 0, 1440, 390);
-    @include adaptiveValue("padding-block-end", 76, 27, 0, 1440, 390);
 
     @media (max-width:$mobile) {
       grid-template-rows: auto;
@@ -394,7 +416,6 @@
 
   // .style__item
   &__item {
-
     @media (min-width:$mobile) {
 
       &:nth-child(2),

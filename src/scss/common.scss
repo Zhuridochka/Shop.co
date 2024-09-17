@@ -57,7 +57,6 @@
   &__title {
     font-size: toRem(20);
     font-weight: 700;
-
     margin-block-end: toRem(8);
 
     @media (any-hover: hover) {
@@ -66,6 +65,10 @@
           text-decoration: underline;
         }
       }
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(16);
     }
   }
 
@@ -120,12 +123,20 @@
   align-items: center;
   column-gap: toRem(10);
 
+  @media (max-width:$mobileSmall) {
+    column-gap: toRem(5);
+  }
+
   // .price-product__current
   &__current {
     font-size: toRem(24);
     line-height: 133.333333%;
     /* 32/24 */
     font-weight: 700;
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(16);
+    }
   }
 
   // .price-product__old
@@ -136,6 +147,10 @@
     font-weight: 700;
     color: rgba(0, 0, 0, 0.40);
     text-decoration: line-through;
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(16);
+    }
   }
 
   // .price-product__persent
@@ -151,6 +166,11 @@
     background-color: rgba(255, 51, 51, 0.10);
     border-radius: toRem(62);
     padding: toRem(6) toRem(14);
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(10);
+
+    }
   }
 }
 
@@ -271,6 +291,10 @@
   padding: toRem(28) toRem(32);
   border-radius: toRem(20);
   border: toRem(1) solid rgba(0, 0, 0, 0.10);
+
+  @media (max-width:$mobileSmall) {
+    padding: toRem(24);
+  }
 
   // .review__wrapper
   &__wrapper {}
