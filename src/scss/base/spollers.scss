@@ -6,7 +6,7 @@
 	flex-grow: 1;
 	display: grid;
 	grid-template-columns: repeat(4, minmax(120px, 1fr));
-	column-gap: toRem(15);
+	column-gap: toRem(25);
 	row-gap: toRem(24);
 
 	@media (max-width: toEm(667)) {
@@ -15,7 +15,10 @@
 }
 
 // Спойлер
-.spollers__item {}
+.spollers__item {
+	display: flex;
+	flex-direction: column;
+}
 
 // Заголовок спойлера
 .spollers__title {

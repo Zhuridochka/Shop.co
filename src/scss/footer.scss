@@ -32,8 +32,12 @@
   &__body {
     display: flex;
     justify-content: space-between;
-    column-gap: toRem(20);
+    column-gap: toRem(110);
     row-gap: toRem(30);
+
+    @media (max-width: toEm(1090)) {
+      column-gap: toRem(70);
+    }
 
     @media (max-width:$tablet) {
       flex-direction: column;
