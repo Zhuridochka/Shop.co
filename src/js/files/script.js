@@ -68,21 +68,25 @@ function windowLoaded() {
   }
 
   // Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану
-  const arrivalsItems = document.querySelector(".arrivals__items");
-  const sellingItems = document.querySelector(".selling__items");
-  const likeItems = document.querySelector(".like__items");
+  function updateDataAttributeBaseOnHeight() {
+    const itemProduct = document.querySelector(".item-product");
+    if (!itemProduct) return;
+    const arrivalsItems = document.querySelector(".arrivals__items");
+    const sellingItems = document.querySelector(".selling__items");
+    const likeItems = document.querySelector(".like__items");
+    const itemProductHeight = itemProduct.offsetHeight;
 
-  if (arrivalsItems || sellingItems || likeItems) {
-    function updateDataAttributeBaseOnHeight() {
-      const itemProduct = document.querySelector(".item-product");
-      const itemProductHeight = itemProduct.offsetHeight;
-
+    if (arrivalsItems) {
       arrivalsItems.dataset.showmoreContent = itemProductHeight;
+    }
+    if (sellingItems) {
       sellingItems.dataset.showmoreContent = itemProductHeight;
+    }
+    if (likeItems) {
       likeItems.dataset.showmoreContent = itemProductHeight;
     }
-    updateDataAttributeBaseOnHeight();
   }
+  updateDataAttributeBaseOnHeight();
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
