@@ -50,37 +50,39 @@ function windowLoaded() {
   updateHeightObjects();
 
   // Функція для додавання технічного класу Image при зміні ширини в'юпорта
-  function removeClassOnSmallScreens() {
-    const imageElement = document.querySelector(".hero__image-bg");
-
-    if (imageElement && window.innerWidth < 992) {
-      // Якщо ширина екрану менша за 992px, видаляємо клас .ibg--top
-      imageElement.classList.remove("ibg--top");
-      imageElement.classList.add("ibg--right90");
-    } else {
-      // Якщо ширина екрану більша за 992px, повертаємо клас .ibg--top (якщо потрібно)
-      imageElement.classList.add("ibg--top");
-      imageElement.classList.remove("ibg--right90");
+  const imageElement = document.querySelector(".hero__image-bg");
+  if (imageElement) {
+    function removeClassOnSmallScreens() {
+      if (window.innerWidth < 992) {
+        // Якщо ширина екрану менша за 992px, видаляємо клас .ibg--top
+        imageElement.classList.remove("ibg--top");
+        imageElement.classList.add("ibg--right90");
+      } else {
+        // Якщо ширина екрану більша за 992px, повертаємо клас .ibg--top (якщо потрібно)
+        imageElement.classList.add("ibg--top");
+        imageElement.classList.remove("ibg--right90");
+      }
     }
+    // Викликаємо функцію
+    removeClassOnSmallScreens();
   }
-  // Викликаємо функцію
-  removeClassOnSmallScreens();
 
   // Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану
-  function updateDataAttributeBaseOnHeight() {
-    const itemProduct = document.querySelector(".item-product");
-    const itemProductHeight = itemProduct.offsetHeight;
-    const arrivalsItems = document.querySelector(".arrivals__items");
-    const sellingItems = document.querySelector(".selling__items");
-    const likeItems = document.querySelector(".like__items");
+  const arrivalsItems = document.querySelector(".arrivals__items");
+  const sellingItems = document.querySelector(".selling__items");
+  const likeItems = document.querySelector(".like__items");
 
-    if (arrivalsItems || sellingItems || likeItems) {
+  if (arrivalsItems || sellingItems || likeItems) {
+    function updateDataAttributeBaseOnHeight() {
+      const itemProduct = document.querySelector(".item-product");
+      const itemProductHeight = itemProduct.offsetHeight;
+
       arrivalsItems.dataset.showmoreContent = itemProductHeight;
       sellingItems.dataset.showmoreContent = itemProductHeight;
       likeItems.dataset.showmoreContent = itemProductHeight;
     }
+    updateDataAttributeBaseOnHeight();
   }
-  updateDataAttributeBaseOnHeight();
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
