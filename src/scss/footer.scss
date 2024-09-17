@@ -3,10 +3,11 @@
 //====================================================================================================
 .footer {
   background-color: $bgMain;
-  padding-block-start: toRem(90);
 
   // .footer__container
-  &__container {}
+  &__container {
+    // @include adaptiveValue("padding-block-start", 50, 30, 0, 1440, 390);
+  }
 
   // .footer__main
   &__main {}
@@ -20,6 +21,11 @@
 
   @media (max-width:$mobile) {
     padding-block: toRem(40);
+  }
+
+  @media (max-width:$mobileSmall) {
+    padding-block-start: toRem(30);
+    padding-block-end: toRem(40);
   }
 
   // .main-footer__body

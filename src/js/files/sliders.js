@@ -31,8 +31,8 @@ function initSliders() {
   if (document.querySelector(".customers__slider")) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
-    new Swiper(".customers__slider", {
-      // Вказуємо склас потрібного слайдера
+    const swiperCustomers = new Swiper(".customers__slider", {
+      // Вказуємо клас потрібного слайдера
       // Підключаємо модулі слайдера
       // для конкретного випадку
       modules: [Navigation],
@@ -79,30 +79,59 @@ function initSliders() {
         prevEl: ".customers__button-prev",
         nextEl: ".customers__button-next",
       },
-      /*
-			// Брейкпоінти
-			breakpoints: {
-				640: {
-					slidesPerView: 1,
-					spaceBetween: 0,
-					autoHeight: true,
-				},
-				768: {
-					slidesPerView: 2,
-					spaceBetween: 20,
-				},
-				992: {
-					slidesPerView: 3,
-					spaceBetween: 20,
-				},
-				1268: {
-					slidesPerView: 4,
-					spaceBetween: 30,
-				},
-			},
-			*/
+
+      // Брейкпоінти
+      breakpoints: {
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 0,
+        },
+        510: {
+          slidesPerView: 1.5,
+          spaceBetween: 10,
+          // autoHeight: true,
+        },
+        768: {
+          slidesPerView: 2.2,
+          spaceBetween: 20,
+        },
+        992: {
+          slidesPerView: 2.6,
+          spaceBetween: 20,
+        },
+        1268: {
+          slidesPerView: 3,
+          spaceBetween: 30,
+        },
+      },
+
       // Події
-      on: {},
+      on: {
+        slideChange: function () {
+          // Видаляємо ефект blur з усіх слайдів
+          document.querySelectorAll(".swiper-slide").forEach((slide) => {
+            slide.classList.remove("blur-effect");
+          });
+
+          // Отримуємо індекс активного слайду
+          const activeIndex = swiperCustomers.activeIndex;
+
+          // Обчислюємо індекс третього слайду після активного
+          const targetIndex = activeIndex + (3 % swiperCustomers.slides.length);
+          const prevIndex = activeIndex - 1;
+
+          const slides = swiperCustomers.slides;
+
+          if (slides[targetIndex]) {
+            // Додаємо ефект розмиття до цього слайду
+            slides[targetIndex].classList.add("blur-effect");
+          }
+
+          if (slides[prevIndex]) {
+            slides[prevIndex].classList.add("blur-effect");
+          }
+        },
+      },
     });
   }
 }

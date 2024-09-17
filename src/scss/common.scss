@@ -158,19 +158,40 @@
 .offers {
   background-color: $mainColor;
   border-radius: toRem(20);
-  padding: toRem(36) toRem(64);
   display: flex;
   column-gap: toRem(40);
   align-items: center;
   justify-content: space-between;
+  padding-block: toRem(36);
 
+  @media (max-width:$mobileSmall) {
+    padding-block: toRem(32);
+  }
+
+  @include adaptiveValue("padding-inline", 64, 25, 0, 1440, 390);
 
   // .offers__title
-  &__title {}
+  &__title {
+    &:not(:last-child) {
+      margin-block-end: toRem(32);
+    }
+
+    @media (max-width: toEm(900)) {
+      text-align: center;
+    }
+
+    @media (max-width:$mobileSmall) {
+      text-align: left;
+    }
+  }
 
   // .offers__form
   &__form {
     min-inline-size: toRem(320);
+
+    @media (max-width: toEm(900)) {
+      inline-size: 100%;
+    }
   }
 
   // .offers__body
@@ -206,6 +227,8 @@
 
   // .offers__button
   &__button {}
+
+
 }
 
 //=================================================================
@@ -226,6 +249,14 @@
     line-height: 1.125;
     /* 45/40 */
     color: #fff;
+
+    @media (max-width:$mobile) {
+      font-size: toRem(36);
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(32);
+    }
   }
 
   &--big {

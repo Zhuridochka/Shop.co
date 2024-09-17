@@ -20,6 +20,9 @@
 
   // .page__customers  
   &__customers {}
+
+  // .page__offers    
+  &__offers {}
 }
 
 //====================================================================================================
@@ -368,7 +371,7 @@
     text-align: center;
 
     &:not(:last-child) {
-      margin-block-end: toRem(64);
+      @include adaptiveValue("margin-block-end", 64, 28, 0, 1440, 390);
     }
   }
 
@@ -418,7 +421,9 @@
 //====================================================================================================
 //===Customers
 .customers {
-  padding-block-end: toRem(80);
+  @include adaptiveValue("padding-block-end", 80, 50, 0,
+    1440,
+    390);
 
   // .customers__container
   &__container {}
@@ -460,11 +465,7 @@
   }
 
   // .customers__button-prev
-  &__button-prev {
-    &::before {
-      transform: rotate(180deg) translate(0, 5%);
-    }
-  }
+  &__button-prev {}
 
   // .customers__button-next
   &__button-next {}
@@ -484,4 +485,22 @@
   // .customers__slide
 
   &__slide {}
+}
+
+//====================================================================================================
+//===Offers
+.offers-section {
+  position: relative;
+  z-index: 1;
+
+  // .offers-section__container
+  &__container {}
+
+  // .offers-section__offers
+  &__offers {
+    @media (max-width: toEm(900)) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
 }

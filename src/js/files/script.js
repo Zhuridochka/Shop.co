@@ -26,8 +26,8 @@ function windowLoaded() {
     }
   };
 
-  // Визначення висоти Header
-  function updateHeaderHeight() {
+  // Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
+  function updateHeightObjects() {
     const header = document.querySelector(".header");
     const headerHeight = header.offsetHeight;
     const menuBody = document.querySelector(".menu__body");
@@ -35,11 +35,30 @@ function windowLoaded() {
     if (window.innerWidth < 767.98) {
       menuBody.style.paddingTop = `${headerHeight + 10}px`;
     }
+
+    const offersObject = document.querySelector(".offers");
+    const offersHeight = offersObject.offsetHeight;
+    const halfOffersHeight = offersHeight / 2;
+    const pageOffers = document.querySelector(".page__offers");
+    const footer = document.querySelector(".footer");
+    if (offersObject) {
+      pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
+      footer.style.paddingTop = `${halfOffersHeight}px`;
+    }
   }
 
-  updateHeaderHeight();
+  updateHeightObjects();
 
-  // Функція для додавання технічного класу при зміні ширини в'юпорта
+  // function updateOffersHeight() {
+  //   const offers = document.querySelector(".offers");
+  //   const offersHeight = offers.offsetHeight;
+  //   const halfOffersHeight = offersHeight / 2;
+  //   const pageOffers = document.querySelector(".page__offers");
+  //   pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
+  // }
+  // updateOffersHeight();
+
+  // Функція для додавання технічного класу Image при зміні ширини в'юпорта
   function removeClassOnSmallScreens() {
     const imageElement = document.querySelector(".hero__image-bg");
 
