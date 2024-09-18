@@ -462,7 +462,6 @@
   &__title {}
 
   // .customers__navigation
-
   &__navigation {
     display: flex;
     align-items: center;
@@ -483,6 +482,10 @@
       align-self: center;
       font-size: toRem(19);
     }
+  }
+
+  .swiper-button-disabled {
+    color: $mainColor10;
   }
 
   // .customers__button-prev

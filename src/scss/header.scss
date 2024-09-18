@@ -172,6 +172,13 @@
     flex-direction: row-reverse;
     padding-block: toRem(12);
     padding-inline: toRem(16);
+    transition: all 0.4s;
+
+    @media (any-hover: hover) {
+      &:hover {
+        outline: toRem(1) solid $mainColor60;
+      }
+    }
 
     @media (max-width:$mobile) {
       padding-block: toRem(4);
@@ -221,6 +228,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: transform 0.4s;
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        &::before {
+          transform: scale(1.15);
+        }
+      }
     }
   }
 }

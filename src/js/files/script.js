@@ -41,7 +41,7 @@ function windowLoaded() {
     const halfOffersHeight = offersHeight / 2;
     const pageOffers = document.querySelector(".page__offers");
     const footer = document.querySelector(".footer");
-    if (offersObject) {
+    if (pageOffers) {
       pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
       footer.style.paddingTop = `${halfOffersHeight}px`;
     }
