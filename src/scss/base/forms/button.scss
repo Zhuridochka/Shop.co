@@ -4,6 +4,7 @@
 .button {
 	display: inline-flex;
 	padding: toRem(16) toRem(54);
+	justify-content: center;
 	background-color: $mainColor;
 	border-radius: toRem(62);
 	font-weight: 500;

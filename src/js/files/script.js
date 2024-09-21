@@ -27,27 +27,38 @@ function windowLoaded() {
   };
 
   // Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
-  function updateHeightObjects() {
+  function updateHeightObjectsMenuBody() {
     const header = document.querySelector(".header");
+    if (!header) return;
     const headerHeight = header.offsetHeight;
     const menuBody = document.querySelector(".menu__body");
 
-    if (window.innerWidth < 767.98) {
-      menuBody.style.paddingTop = `${headerHeight + 10}px`;
+    if (header) {
+      if (window.innerWidth < 767.98) {
+        menuBody.style.paddingTop = `${headerHeight + 10}px`;
+      }
     }
+  }
+  updateHeightObjectsMenuBody();
 
+  function updateHeightObjectsPageOffers() {
     const offersObject = document.querySelector(".offers");
     const offersHeight = offersObject.offsetHeight;
     const halfOffersHeight = offersHeight / 2;
     const pageOffers = document.querySelector(".page__offers");
+    const productOffers = document.querySelector(".product__offers");
     const footer = document.querySelector(".footer");
     if (pageOffers) {
       pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
       footer.style.paddingTop = `${halfOffersHeight}px`;
     }
+    if (productOffers) {
+      productOffers.style.marginBottom = `${-halfOffersHeight}px`;
+      footer.style.paddingTop = `${halfOffersHeight}px`;
+    }
   }
 
-  updateHeightObjects();
+  updateHeightObjectsPageOffers();
 
   // Функція для додавання технічного класу Image при зміні ширини в'юпорта
   const imageElement = document.querySelector(".hero__image-bg");
@@ -87,6 +98,60 @@ function windowLoaded() {
     }
   }
   updateDataAttributeBaseOnHeight();
+
+  function updateDataAttributeReviewOnHeight() {
+    const blockContent = document.querySelector(".block__content");
+    if (!blockContent) return;
+    const ratingReviewsBlock = document.querySelector(".rating-reviews__block");
+    const blockContentHeight = blockContent.offsetHeight;
+    let doubleblockContentHeight = blockContentHeight * 3;
+    doubleblockContentHeight += 45;
+
+    if (ratingReviewsBlock) {
+      ratingReviewsBlock.dataset.showmoreContent = doubleblockContentHeight;
+    }
+  }
+  updateDataAttributeReviewOnHeight();
+
+  // Функція для видкриття списку у об'єкта відкуки
+  const reviewActivities = document.querySelectorAll(".review__activity");
+
+  // Перевіряємо, чи є хоча б один елемент з класом .review__activity
+  if (reviewActivities.length > 0) {
+    // Перебираємо кожен блок з класом .review__activity
+    reviewActivities.forEach((reviewActivity) => {
+      const button = reviewActivity.querySelector(".activity-review__button");
+      const reviewList = reviewActivity.querySelector(".activity-review__list");
+
+      // Функція для перемикання класів --open та --close
+      function toggleReviewList() {
+        if (reviewList.classList.contains("activity-review__list--open")) {
+          reviewList.classList.remove("activity-review__list--open");
+          reviewList.classList.add("activity-review__list--close");
+        } else {
+          reviewList.classList.remove("activity-review__list--close");
+          reviewList.classList.add("activity-review__list--open");
+        }
+      }
+
+      // Клік на кнопці - показати/сховати список
+      button.addEventListener("click", function (event) {
+        event.stopPropagation(); // Запобігаємо спрацюванню обробника для кліка поза списком
+        toggleReviewList();
+      });
+
+      // Закриття списку при кліку поза межами списку
+      document.addEventListener("click", function (event) {
+        if (
+          !reviewList.contains(event.target) &&
+          !button.contains(event.target)
+        ) {
+          reviewList.classList.remove("activity-review__list--open");
+          reviewList.classList.add("activity-review__list--close");
+        }
+      });
+    });
+  }
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);

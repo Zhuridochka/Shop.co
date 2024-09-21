@@ -31,7 +31,7 @@
 	line-height: 1.125;
 	/* 18/16 */
 	letter-spacing: toRem(3);
-	margin-block-end: toRem(28);
+	margin-block-end: toRem(26);
 
 	&::marker,
 	&::-webkit-details-marker {
@@ -116,6 +116,13 @@
 	line-height: 1.1875;
 	/* 19/16 */
 	color: $mainColor60;
+	transition: text-decoration 0.4s;
+
+	@media (any-hover: hover) {
+		&:hover {
+			text-decoration: underline;
+		}
+	}
 
 	&:not(:last-child) {
 		margin-block-end: toRem(18);
@@ -126,4 +133,5 @@
 			margin-block-end: toRem(15);
 		}
 	}
+
 }
