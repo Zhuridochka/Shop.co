@@ -148,7 +148,7 @@ function initSliders() {
     modules: [Thumbs],
     slidesPerView: 3,
     spaceBetween: 12,
-    loop: true,
+    //loop: true,
     freeMode: true,
     watchSlidesProgress: true,
 
@@ -173,7 +173,7 @@ function initSliders() {
     // Підключаємо модулі слайдера
     // для конкретного випадку
     modules: [Thumbs],
-    loop: true,
+    //loop: true,
     // spaceBetween: 5,
     thumbs: {
       swiper: swiperPreviewsProduct,
