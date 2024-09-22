@@ -1,23 +1,33 @@
 .tabs {
+
 	// .tabs__navigation
 	&__navigation {
 		display: flex;
 	}
+
 	// .tabs__title
 	&__title {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
-		border-radius: toRem(5);
+		flex: 1 1 33.33333%;
+		border-block-end: toRem(2) solid $mainColor10;
+		padding-block-end: toRem(24);
+		color: $mainColor60;
+		font-size: toRem(20);
+		line-height: 1.1;
+		/* 22/20 */
+
 		&._tab-active {
-			border: 1px solid #000;
+			border-block-end: toRem(2) solid $mainColor;
+			color: $mainColor;
+			font-weight: 500;
 		}
 	}
+
 	// .tabs__content
 	&__content {
-		border: 1px solid #eee;
-		padding: toRem(10) toRem(15);
+		// border: 1px solid #eee;
+		// padding: toRem(10) toRem(15);
 	}
+
 	// .tabs__body
-	&__body {
-	}
+	&__body {}
 }

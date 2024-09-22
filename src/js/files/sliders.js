@@ -8,7 +8,7 @@
 // При необхідності підключаємо додаткові модулі слайдера, вказуючи їх у {} через кому
 // Приклад: { Navigation, Autoplay }
 import Swiper from "swiper";
-import { Navigation } from "swiper/modules";
+import { Navigation, Thumbs, Controller } from "swiper/modules";
 /*
 Основні модулі слайдера:
 Navigation, Pagination, Autoplay, 
@@ -28,6 +28,8 @@ import "../../scss/base/swiper.scss";
 function initSliders() {
   // Список слайдерів
   // Перевіряємо, чи є слайдер на сторінці
+
+  // Customers_slider
   if (document.querySelector(".customers__slider")) {
     // Вказуємо склас потрібного слайдера
     // Створюємо слайдер
@@ -134,7 +136,54 @@ function initSliders() {
       },
     });
   }
+
+  // Previews_slider
+  // if (document.querySelector(".previews-slider-product")) {
+  // Вказуємо склас потрібного слайдера
+  // Створюємо слайдер
+  const swiperPreviewsProduct = new Swiper(".previews-slider-product", {
+    // Вказуємо клас потрібного слайдера
+    // Підключаємо модулі слайдера
+    // для конкретного випадку
+    modules: [Thumbs],
+    slidesPerView: 3,
+    spaceBetween: 12,
+    //loop: true,
+    freeMode: true,
+    watchSlidesProgress: true,
+
+    breakpoints: {
+      1118.98: {
+        direction: "vertical",
+        spaceBetween: 14,
+      },
+    },
+
+    // Події
+    on: {},
+  });
+  // }
+
+  // Product-main_slider
+  /*if (document.querySelector(".main-slider-product")) {*/
+  // Вказуємо склас потрібного слайдера
+  // Створюємо слайдер
+  const swiperMainProduct = new Swiper(".main-slider-product", {
+    // Вказуємо клас потрібного слайдера
+    // Підключаємо модулі слайдера
+    // для конкретного випадку
+    modules: [Thumbs],
+    //loop: true,
+    // spaceBetween: 5,
+    thumbs: {
+      swiper: swiperPreviewsProduct,
+    },
+
+    // Події
+    on: {},
+  });
 }
+// }
 // Скролл на базі слайдера (за класом swiper scroll для оболонки слайдера)
 function initSlidersScroll() {
   let sliderScrollItems = document.querySelectorAll(".swiper_scroll");

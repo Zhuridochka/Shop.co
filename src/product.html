@@ -7,9 +7,474 @@
 <body>
   <div class="wrapper">
     @@include('html/_header.htm',{})
-    <main class="page">
-
-      <section class="page__like like">
+    <main class="product">
+      <div class="product__breadcrumbs breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item _icon-Frame">
+              <a href="#" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item _icon-Frame">
+              <a href="#" class="breadcrumbs__link">Shop</a>
+            </li>
+            <li class="breadcrumbs__item _icon-Frame">
+              <a href="#" class="breadcrumbs__link">Men</a>
+            </li>
+            <li class="breadcrumbs__item">T-<span>shirts</span></li>
+          </ul>
+        </div>
+      </div>
+      <section class="product__main-product main-product">
+        <div class="main-product__container">
+          <div class="main-product__slider slider-product ">
+            <div class="slider-product__previews previews-slider-product swiper">
+              <div class="previews-slider-product__wrapper swiper-wrapper">
+                <div class="previews-slider-product__slide swiper-slide">
+                  <img class="previews-slider-product__image" src="@img/product//image_01.png" alt="Image 01">
+                </div>
+                <div class="previews-slider-product__slide swiper-slide">
+                  <img class="previews-slider-product__image" src="@img/product/image_02_previews.png" alt="Image 02">
+                </div>
+                <div class="previews-slider-product__slide swiper-slide">
+                  <img class="previews-slider-product__image" src="@img/product/image_03_previews.png" alt="Image 03">
+                </div>
+                <div class="previews-slider-product__slide swiper-slide">
+                  <img class="previews-slider-product__image" src="@img/product/image_01.png" alt="Image 01">
+                </div>
+                <div class="previews-slider-product__slide swiper-slide">
+                  <img class="previews-slider-product__image" src="@img/product/image_02_previews.png" alt="Image 02">
+                </div>
+              </div>
+            </div>
+            <div class="slider-product__main main-slider-product swiper">
+              <div class="main-slider-product__wrapper swiper-wrapper">
+                <div class="main-slider-product__slide swiper-slide">
+                  <img class="main-slider-product__image" src="@img/product/image_01.png" alt="Image 01">
+                </div>
+                <div class="main-slider-product__slide swiper-slide">
+                  <img class="main-slider-product__image" src="@img/product/image_02.png" alt="Image 02">
+                </div>
+                <div class="main-slider-product__slide swiper-slide">
+                  <img class="main-slider-product__image" src="@img/product/image_03.png" alt="Image 03">
+                </div>
+                <div class="main-slider-product__slide swiper-slide">
+                  <img class="main-slider-product__image" src="@img/product/image_01.png" alt="Image 01">
+                </div>
+                <div class="main-slider-product__slide swiper-slide">
+                  <img class="main-slider-product__image" src="@img/product/image_02.png" alt="Image 02">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-product__body">
+            <div class="main-product__info info-main-product">
+              <h1 class="info-main-product__title title title--middle">One Life Graphic T-shirt</h1>
+              <div class="info-main-product__opinion opinion">
+                <div data-rating="set" data-rating-size="4" class="opinion__rating rating _icon-star_05"></div>
+                <div class="opinion__number">4.5/5</div>
+              </div>
+              <div class="info-main-product__price price-product">
+                <div class="price-product__current">$260</div>
+                <div class="price-product__old">$300</div>
+                <div class="price-product__persent">-40%</div>
+              </div>
+              <div class="info-main-product__text">
+                <p>
+                  This graphic t-shirt which is perfect for any occasion. Crafted from a soft and breathable fabric, it offers superior comfort and style.
+                </p>
+              </div>
+            </div>
+            <form class="main-product__actions actions-product" action="#">
+              <div class="actions-product__options options-product">
+                <div class="options-product__block">
+                  <label for="color" title="Підказка" class="options-product__label">
+                    Select Colors
+                  </label>
+                  <div class="options-product__color color-options-product">
+                    <div class="color-options-product__items">
+                      <label class="color-options-product__item">
+                        <input checked class="color-options-product__input" type="radio" name="color">
+                        <img class="color-options-product__image" src="@img/product/color_01.svg" alt="color 01">
+                      </label>
+                      <label class="color-options-product__item">
+                        <input class="color-options-product__input" type="radio" name="color">
+                        <img src="@img/product/color_02.svg" alt="color 02">
+                      </label>
+                      <label class="color-options-product__item">
+                        <input class="color-options-product__input" type="radio" name="color">
+                        <img src="@img/product/color_03.svg" alt="color 03">
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="options-product__block">
+                  <label for="size" title="Підказка" class="options-product__label">
+                    Choose Size
+                  </label>
+                  <div class="options-product__size options">
+                    <div class="options__item">
+                      <input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                      <label for="o_1" class="options__label"><span class="options__text">Small</span></label>
+                    </div>
+                    <div class="options__item">
+                      <input id="o_2" class="options__input" type="radio" value="2" name="option">
+                      <label for="o_2" class="options__label"><span class="options__text">Medium</span></label>
+                    </div>
+                    <div class="options__item">
+                      <input checked id="o_3" class="options__input" type="radio" value="3" name="option">
+                      <label for="o_3" class="options__label"><span class="options__text">Large</span></label>
+                    </div>
+                    <div class="options__item">
+                      <input id="o_4" class="options__input" type="radio" value="4" name="option">
+                      <label for="o_4" class="options__label"><span class="options__text">X-Large</span></label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- <div class="options">
+                <div class="options__item">
+                  <input id="o_1" class="options__input" checked type="radio" value="1" name="option">
+                  <label for="o_1" class="options__label"><span class="options__text"></span></label>
+                </div>
+                <div class="options__item">
+                  <input id="o_2" class="options__input" type="radio" value="2" name="option">
+                  <label for="o_2" class="options__label"><span class="options__text"></span></label>
+                </div>
+              </div> -->
+              <div class="actions-product__buy buy-actions-product">
+                <div data-quantity class="buy-actions-product__quantity quantity">
+                  <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                  <div class="quantity__input">
+                    <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                  </div>
+                  <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                </div>
+                <button class="buy-actions-product__button button" type="button">Add to Cart</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </section>
+      <div class="product__tabs tabs-product">
+        <div class="tabs-product__container">
+          <div data-tabs class="tabs-product__body tabs">
+            <nav data-tabs-titles class="tabs__navigation">
+              <button type="button" class="tabs__title ">Product Details</button>
+              <button type="button" class="tabs__title _tab-active">Rating & Reviews</button>
+              <button type="button" class="tabs__title">FAQs</button>
+            </nav>
+            <div data-tabs-body class="tabs__content">
+              <div class="tabs__body">
+                Вміст першого таба
+              </div>
+              <div class="tabs__body">
+                <div class="tabs__rating-reviews rating-reviews">
+                  <div class="rating-reviews__top">
+                    <div class="rating-reviews__text">All Reviews <span>(451)</span></div>
+                    <div class="rating-reviews__activity activity-rating-reviews">
+                      <button class="activity-rating-reviews__filter _icon-filter" type="button"></button>
+                      <select name="form[]" data-class-modif="form">
+                        <option value="1" selected>Latest</option>
+                        <option value="2">Пункт №2</option>
+                        <option value="3">Пункт №3</option>
+                        <option value="4">Пункт №4</option>
+                      </select>
+                      <button class="activity-rating-reviews__button button" type="button">Write a Review</button>
+                    </div>
+                  </div>
+                  <div data-showmore class="rating-reviews__box">
+                    <ul data-showmore-content="317" class="rating-reviews__block">
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Samantha D.</div>
+                            <div class="review__text">
+                              <p>
+                                "I absolutely love this t-shirt! The design is unique and the fabric feels so comfortable. As a fellow designer, I appreciate the attention to detail. It's become my favorite go-to shirt."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="14.08.2023">
+                            <span>Posted on</span> August 14, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Alex M.</div>
+                            <div class="review__text">
+                              <p>
+                                "The t-shirt exceeded my expectations! The colors are vibrant and the print quality is top-notch. Being a UI/UX designer myself, I'm quite picky about aesthetics, and this t-shirt definitely gets a thumbs up from me."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="15.08.2023">
+                            <span>Posted on</span> August 15, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Ethan R.</div>
+                            <div class="review__text">
+                              <p>
+                                "This t-shirt is a must-have for anyone who appreciates good design. The minimalistic yet stylish pattern caught my eye, and the fit is perfect. I can see the designer's touch in every aspect of this shirt."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="16.08.2023">
+                            <span>Posted on</span> August 16, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Olivia P.</div>
+                            <div class="review__text">
+                              <p>
+                                "As a UI/UX enthusiast, I value simplicity and functionality. This t-shirt not only represents those principles but also feels great to wear. It's evident that the designer poured their creativity into making this t-shirt stand out."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="17.08.2023">
+                            <span>Posted on</span> August 17, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Liam K.</div>
+                            <div class="review__text">
+                              <p>
+                                "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="18.08.2023">
+                            <span>Posted on</span> August 18, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Ava H.</div>
+                            <div class="review__text">
+                              <p>
+                                "I'm not just wearing a t-shirt; I'm wearing a piece of design philosophy. The intricate details and thoughtful layout of the design make this shirt a conversation starter."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="19.08.2023">
+                            <span>Posted on</span> August 19, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Liam K.</div>
+                            <div class="review__text">
+                              <p>
+                                "This t-shirt is a fusion of comfort and creativity. The fabric is soft, and the design speaks volumes about the designer's skill. It's like wearing a piece of art that reflects my passion for both design and fashion."
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="17.08.2023">
+                            <span>Posted on</span> August 17, 2023
+                          </time>
+                        </div>
+                      </li>
+                      <li class="block__content review">
+                        <div class="review__wrapper">
+                          <div class="review__body">
+                            <div class="review__top">
+                              <div class="review__raiting-stars stars-raiting">
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                                <div class="stars-raiting__star"></div>
+                              </div>
+                              <div class="review__activity activity-review">
+                                <button class="activity-review__button _icon-ellipsis" type="button"></button>
+                                <ul class="activity-review__list activity-review__list--close">
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Complain about feedback</a>
+                                  </li>
+                                  <li class="activity-review__item">
+                                    <a class="activity-review__link" href="#">Open a review</a>
+                                  </li>
+                                </ul>
+                              </div>
+                            </div>
+                            <div class="review__user-name _icon-ok">Sarah M.</div>
+                            <div class="review__text">
+                              <p>
+                                "I'm blown away by the quality and style of the clothes I received from Shop.co. From casual wear to elegant dresses, every piece I've bought has exceeded my expectations.”
+                              </p>
+                            </div>
+                          </div>
+                          <time class="review__date" datetime="16.08.2023">
+                            <span>Posted on</span> August 16, 2023
+                          </time>
+                        </div>
+                      </li>
+                    </ul>
+                    <button hidden data-showmore-button type="button" class="rating-reviews__more block__more">
+                      <span>Load More Reviews</span>
+                      <span>Hide</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="tabs__body">
+                Вміст третього таба
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <section class="product__like like">
         <div class="like__container">
           <div class="like__body">
             <h2 class="like__title title">You might also like</h2>
@@ -17,7 +482,7 @@
               <div data-showmore-content="390" class="like__items">
                 <article class="like__item item-product">
                   <a href="#" class="item-product__link">
-                    <img class="item-product__image" src="@img/test/cat_667x1000_px.jpg" alt="Image 01">
+                    <img class="item-product__image" src="@img/like/image_01.png" alt="Image 01">
                   </a>
                   <div class="item-product__content">
                     <h4 class="item-product__title">
@@ -173,7 +638,7 @@
           </div>
         </div>
       </section>
-      <section class="page__offers offers-section">
+      <section class="product__offers offers-section">
         <div class="offers-section__container">
           <form class="offers-section__offers offers" action="#" enctype="multipart/form-data">
             <h2 class="offers__title title title--white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
