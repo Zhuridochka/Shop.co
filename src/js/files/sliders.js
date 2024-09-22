@@ -149,8 +149,6 @@ function initSliders() {
     slidesPerView: 3,
     spaceBetween: 12,
     //loop: true,
-    freeMode: true,
-    watchSlidesProgress: true,
 
     breakpoints: {
       1118.98: {
