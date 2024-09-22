@@ -390,6 +390,15 @@
     flex-basis: toRem(23);
     aspect-ratio: 1 / 1;
     flex-shrink: 0;
+
+    // .stars-raiting__star--star05
+    &--star05 {
+      background: url('../img/iconfonts/star_05.svg') 0 0 / 100% no-repeat;
+      inline-size: toRem(11);
+      flex-basis: toRem(11);
+      aspect-ratio: 11 / 21;
+      flex-shrink: 0;
+    }
   }
 }
 
