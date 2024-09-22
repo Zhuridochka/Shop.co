@@ -97,20 +97,7 @@
   column-gap: toRem(13);
 
   // .opinion__rating
-  &__rating {
-    display: flex;
-    align-items: center;
-    row-gap: toRem(5);
-    flex-direction: row-reverse;
-
-    &::before {
-      inline-size: toRem(9);
-      block-size: toRem(18);
-      font-size: toRem(18);
-      flex-shrink: 0;
-      color: $yelowColor;
-    }
-  }
+  &__rating {}
 
   // .opinion__number
   &__number {
@@ -381,6 +368,7 @@
 .stars-raiting {
   display: flex;
   align-items: center;
+  justify-content: center;
   column-gap: toRem(6.4);
 
   // .stars-raiting__star
@@ -396,7 +384,7 @@
       background: url('../img/iconfonts/star_05.svg') 0 0 / 100% no-repeat;
       inline-size: toRem(11);
       flex-basis: toRem(11);
-      aspect-ratio: 11 / 21;
+      aspect-ratio: 11 / 23;
       flex-shrink: 0;
     }
   }
