@@ -1,7 +1,4 @@
-.swiper {
-	// width: 100%;
-	// overflow: visible;
-}
+.swiper {}
 
 .swiper-initialized {
 	touch-action: pan-y;
@@ -13,7 +10,6 @@
 	box-sizing: content-box;
 	display: flex;
 	position: relative;
-
 }
 
 .swiper-vertical {
@@ -31,7 +27,6 @@
 .swiper-initialized {
 	.swiper-slide {
 		flex-shrink: 0;
-		// transition-property: transform;
 	}
 }
 
