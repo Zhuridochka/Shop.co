@@ -64,6 +64,7 @@
 	&__item {
 
 		&:first-child {
+			position: relative;
 			display: flex;
 			align-items: center;
 			column-gap: toRem(4);
@@ -79,6 +80,7 @@
 					justify-content: center;
 					font-size: toRem(15);
 					transition: all 0.6s;
+					transform: rotate(0);
 				}
 			}
 		}
@@ -89,12 +91,11 @@
 					text-decoration: underline;
 				}
 
-				span {
-					&::before {
-						transform: rotate(-180deg);
-					}
-				}
 			}
+		}
+
+		.rotate-icon {
+			transform: rotate(180deg);
 		}
 	}
 
@@ -103,10 +104,81 @@
 		line-height: 1.375;
 		/* 22/16 */
 		transition: all 0.8s;
+	}
 
-		@media (max-width: $mobile) {}
+	// .menu__sublist	
+	&__sublist {}
+}
+
+//=================
+.menu-sublist {
+	display: none;
+	display: flex;
+	flex-direction: column;
+	row-gap: toRem(10);
+	position: absolute;
+	top: calc(100% + toRem(10));
+	inset-inline-end: 0;
+	min-inline-size: 100%;
+	background-color: $mainColor;
+	color: #fff;
+	padding: toRem(10) toRem(15);
+	border-radius: toRem(8);
+
+	// .menu-sublist__open
+	&__open {
+		display: flex; // Відкриваємо список
+	}
+
+	// &__open:has(> ._icon-Frame::before) {
+	// 	transform: rotate(180deg);
+
+	// }
+
+	// .menu-sublist__close
+	&__close {
+		display: none; // Закриваємо список
+	}
+
+	// .menu-sublist__item
+	&__item {
+		@media (any-hover: hover) {
+			&:hover {
+				.menu-sublist__link::after {
+					inline-size: 100%;
+				}
+			}
+		}
+	}
+
+	// .menu-sublist__link
+	&__link {
+		display: inline-block;
+		position: relative;
+		white-space: nowrap;
+		text-decoration: none;
+		transition: text-decoration 0.4s;
+
+		&::after {
+			content: '';
+			position: absolute;
+			inline-size: 0;
+			block-size: toRem(1);
+			inset-block-end: toRem(-1);
+			inset-inline-start: 0;
+			background-color: #fff;
+			transition: inline-size 0.4s ease-out;
+		}
 	}
 }
+
+// .menu-sublist__open {
+// 	._icon-Frame::before {
+// 		transform: rotate(180deg);
+// 	}
+// }
+
+//=================
 
 //Burger Icon
 .icon-menu {
