@@ -554,40 +554,7 @@
 }
 
 //====================================================================================================
-//===Like
-.like {
-
-  // .like__container
-  &__container {}
-
-  // .like__body
-  &__body {}
-
-  // .like__title
-  &__title {}
-
-  // .like__content  
-  &__content {}
-
-  // .like__items
-  &__items {}
-
-  // .like__item
-  &__item {}
-
-  // .like__button-all
-  &__button-all {
-    align-self: center;
-
-    @media (max-width: toEm(530)) {
-      inline-size: 100%;
-    }
-  }
-}
-
-//====================================================================================================
 //===Like-section
-
 .like {
 
   // .like__container

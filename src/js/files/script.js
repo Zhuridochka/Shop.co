@@ -24,6 +24,13 @@ function windowLoaded() {
     } else if (!targetElement.closest(".search-header__body")) {
       document.documentElement.classList.remove("search-open");
     }
+
+    //* Подія при кліку для відкриття списку у об'єкта Sale в меню
+    if (targetElement.closest(".menu__item")) {
+      document.documentElement.classList.toggle("shop-open");
+    } else if (!targetElement.closest(".menu__item")) {
+      document.documentElement.classList.remove("shop-open");
+    }
   };
 
   //* Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
@@ -154,49 +161,49 @@ function windowLoaded() {
   }
 
   //* Функція для відкриття списку у об'єкта Sale в меню
-  const menuItems = document.querySelectorAll(".menu__item");
+  // const menuItems = document.querySelectorAll(".menu__item");
 
   // Перевіряємо, чи є хоча б один елемент з класом .menu__item
-  if (menuItems.length > 0) {
-    menuItems.forEach((menuItem) => {
-      const icon = document.querySelector(".menu__item span");
-      const menuSublist = document.querySelector(".menu__sublist");
+  // if (menuItems.length > 0) {
+  //   menuItems.forEach((menuItem) => {
+  //     const icon = document.querySelector(".menu__item span");
+  //     const menuSublist = document.querySelector(".menu__sublist");
 
-      // Функція для перемикання класів __open та __close
-      function toggleMenuSublist() {
-        if (menuSublist.classList.contains("menu-sublist__close")) {
-          menuSublist.classList.remove("menu-sublist__close");
-          menuSublist.classList.add("menu-sublist__open");
+  //     // Функція для перемикання класів __open та __close
+  //     function toggleMenuSublist() {
+  //       if (menuSublist.classList.contains("menu-sublist__close")) {
+  //         menuSublist.classList.remove("menu-sublist__close");
+  //         menuSublist.classList.add("menu-sublist__open");
 
-          icon.classList.add("rotate-icon");
-        } else if (menuSublist.classList.contains("menu-sublist__open")) {
-          menuSublist.classList.remove("menu-sublist__open");
-          menuSublist.classList.add("menu-sublist__close");
+  //         icon.classList.add("rotate-icon");
+  //       } else if (menuSublist.classList.contains("menu-sublist__open")) {
+  //         menuSublist.classList.remove("menu-sublist__open");
+  //         menuSublist.classList.add("menu-sublist__close");
 
-          icon.classList.remove("rotate-icon");
-        }
-      }
+  //         icon.classList.remove("rotate-icon");
+  //       }
+  //     }
 
-      // Клік по галочці - показати/сховати список
-      menuItem.addEventListener("click", function (event) {
-        event.stopPropagation(); // Запобігаємо спрацюванню обробника для кліка поза списком
-        toggleMenuSublist();
-      });
+  //     // Клік по галочці - показати/сховати список
+  //     menuItem.addEventListener("click", function (event) {
+  //       event.stopPropagation(); // Запобігаємо спрацюванню обробника для кліка поза списком
+  //       toggleMenuSublist();
+  //     });
 
-      //Закриття списку при кліку по галочці і поза межами списку
-      document.addEventListener("click", function (event) {
-        if (
-          !menuSublist.contains(event.target) &&
-          !menuItem.contains(event.target) &&
-          !icon.contains(event.target)
-        ) {
-          menuSublist.classList.remove("menu-sublist__open");
-          menuSublist.classList.add("menu-sublist__close");
-          icon.classList.remove("rotate-icon");
-        }
-      });
-    });
-  }
+  //     //Закриття списку при кліку по галочці і поза межами списку
+  //     document.addEventListener("click", function (event) {
+  //       if (
+  //         !menuSublist.contains(event.target) &&
+  //         !menuItem.contains(event.target) &&
+  //         !icon.contains(event.target)
+  //       ) {
+  //         menuSublist.classList.remove("menu-sublist__open");
+  //         menuSublist.classList.add("menu-sublist__close");
+  //         icon.classList.remove("rotate-icon");
+  //       }
+  //     });
+  //   });
+  // }
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
