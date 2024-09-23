@@ -13,7 +13,28 @@
 		color: $mainColor60;
 		font-size: toRem(20);
 		line-height: 1.1;
+
 		/* 22/20 */
+		@media (max-width: toEm(600)) {
+			flex: 1 1 auto;
+			font-size: toRem(18);
+
+			&:first-child {
+				text-align: left;
+			}
+
+			&:last-child {
+				text-align: right;
+			}
+		}
+
+		@media (max-width:$mobileSmall) {
+			padding-block-end: toRem(20);
+			font-size: toRem(16);
+			line-height: 1.375;
+			/* 22/16 */
+			//white-space: nowrap;
+		}
 
 		&._tab-active {
 			border-block-end: toRem(2) solid $mainColor;

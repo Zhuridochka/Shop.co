@@ -561,6 +561,39 @@
   &__container {}
 
   // .like__body
+  &__body {}
+
+  // .like__title
+  &__title {}
+
+  // .like__content  
+  &__content {}
+
+  // .like__items
+  &__items {}
+
+  // .like__item
+  &__item {}
+
+  // .like__button-all
+  &__button-all {
+    align-self: center;
+
+    @media (max-width: toEm(530)) {
+      inline-size: 100%;
+    }
+  }
+}
+
+//====================================================================================================
+//===Like-section
+
+.like {
+
+  // .like__container
+  &__container {}
+
+  // .like__body
   &__body {
     padding-block-start: toRem(72);
     padding-block-end: toRem(64);
@@ -577,49 +610,26 @@
     @include adaptiveValue("margin-block-end", 55, 32, 0, 1440, 390);
   }
 
-  // .like__content  
+  // .like__content
   &__content {
     display: flex;
     flex-direction: column;
   }
 
-  // .like__items
-  &__items {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-    column-gap: toRem(20);
-    row-gap: toRem(24);
+  // .like__slider
+  &__slider {
+    overflow: hidden;
 
-    &:not(:last-child) {
-      margin-block-end: toRem(36);
-
-      @media (max-width:$mobile) {
-        margin-block-end: toRem(36);
-      }
-
-      @media (max-width: toEm(390)) {
-        margin-block-end: toRem(24);
-      }
-    }
-
-    @media (max-width: toEm(530)) {
-      margin-inline-end: toRem(-60);
-      grid-template-columns: repeat(auto-fill, minmax(198px, 1fr));
-      column-gap: toRem(16);
+    @media (max-width:$mobileSmall) {
+      overflow: visible;
     }
   }
 
-  // .like__item
-  &__item {}
+  // .like__wrapper
+  &__wrapper {}
 
-  // .like__button-all
-  &__button-all {
-    align-self: center;
-
-    @media (max-width: toEm(530)) {
-      inline-size: 100%;
-    }
-  }
+  // .like__slide
+  &__slide {}
 }
 
 //====================================================================================================
