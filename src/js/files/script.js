@@ -13,7 +13,7 @@ function windowLoaded() {
   //   }
   // };
 
-  // Додавання классу .search-open до тегу <head>
+  //* Додавання классу .search-open до тегу <head>
   let documentActions = (e) => {
     const targetElement = e.target;
     const typeEvent = e.type;
@@ -26,7 +26,7 @@ function windowLoaded() {
     }
   };
 
-  // Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
+  //* Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
   function updateHeightObjectsMenuBody() {
     const header = document.querySelector(".header");
     if (!header) return;
@@ -60,7 +60,7 @@ function windowLoaded() {
 
   updateHeightObjectsPageOffers();
 
-  // Функція для додавання технічного класу Image при зміні ширини в'юпорта
+  //* Функція для додавання технічного класу Image при зміні ширини в'юпорта
   const imageElement = document.querySelector(".hero__image-bg");
   if (imageElement) {
     function removeClassOnSmallScreens() {
@@ -78,7 +78,7 @@ function windowLoaded() {
     removeClassOnSmallScreens();
   }
 
-  // Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану
+  //* Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану
   function updateDataAttributeBaseOnHeight() {
     const itemProduct = document.querySelector(".item-product");
     if (!itemProduct) return;
@@ -98,7 +98,7 @@ function windowLoaded() {
     }
   }
   updateDataAttributeBaseOnHeight();
-
+  //* Функція для динамічної зміни data-atribute висоти в залежності від ширини екрану для іншого блоку
   function updateDataAttributeReviewOnHeight() {
     const blockContent = document.querySelector(".block__content");
     if (!blockContent) return;
@@ -113,7 +113,7 @@ function windowLoaded() {
   }
   updateDataAttributeReviewOnHeight();
 
-  // Функція для відкриття списку у об'єкта відкуки
+  //* Функція для відкриття списку у об'єкта відкуки
   const reviewActivities = document.querySelectorAll(".review__activity");
 
   // Перевіряємо, чи є хоча б один елемент з класом .review__activity
@@ -153,7 +153,7 @@ function windowLoaded() {
     });
   }
 
-  // Функція для відкриття списку у об'єкта Sale в меню
+  //* Функція для відкриття списку у об'єкта Sale в меню
   const menuItems = document.querySelectorAll(".menu__item");
 
   // Перевіряємо, чи є хоча б один елемент з класом .menu__item
