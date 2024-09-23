@@ -70,16 +70,12 @@
 	// .select__content
 	&__content {
 		flex: 1 1 auto;
-		//overflow: hidden;
-		//text-overflow: ellipsis;
 		white-space: nowrap;
 	}
 
 	// .select__text
 	&__text {
 		flex: 1 1 auto;
-		//overflow: hidden;
-		//text-overflow: ellipsis;
 		white-space: nowrap;
 	}
 
@@ -93,7 +89,7 @@
 	&__options {
 		color: #fff;
 		position: absolute;
-		top: calc(100% + toRem(1));
+		top: calc(100% + toRem(5));
 		border-radius: 0 0 4px 4px;
 		min-width: 100%;
 		left: 0;
@@ -130,12 +126,12 @@
 		font-family: 'Satoshi', sans-serif;
 
 		&._select-selected {
-			background-color: #eee;
+			//background-color: #eee;
 		}
 
 		@media (any-hover: hover) {
 			&:hover {
-				background: #d9d9d9;
+				text-decoration: underline;
 			}
 		}
 	}
