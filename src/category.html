@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"CategoryPage"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="category">
+      <div class="category__breadcrumbs breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item _icon-Frame">
+              <a href="#" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">Casual</li>
+          </ul>
+        </div>
+      </div>
+      <div class="category__content content-category">
+        <div class="content-category__container">
+          <aside class="content-category__filter filter">
+            <div class="filter__header ">
+              <div class="filter__title">Filters
+                <span class=" _icon-filter"></span>
+                <span class=" _icon-close"></span>
+              </div>
+            </div>
+            <div class="filter__body">
+              <ul class="filter__items">
+                <li class="filter__item">
+                  <a class="filter__link _icon-Frame" href="#">T-shirts</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link _icon-Frame" href="#">Shorts</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link _icon-Frame" href="#">Shirts</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link _icon-Frame" href="#">Hoodie</a>
+                </li>
+                <li class="filter__item">
+                  <a class="filter__link _icon-Frame" href="#">Jeans</a>
+                </li>
+              </ul>
+            </div>
+            <form action="#" data-spollers class="filter__form form-filter form spollers">
+              <details data-open class="form-filter__item item-filter spollers__item">
+                <summary class="item-filter__header spollers__title">
+                  Price
+                  <div class="item-filter__icon _icon-Frame"></div>
+                </summary>
+                <div class="item-filter__body filter-price spollers__body">
+                  <div class="filter-price">
+                    <div class="filter-price__inner">
+                      <input id="price-start" class="filter-price__input filter-price__input--from" name="price-from" data-from="" type="text">
+                      <input id="price-end" class="filter-price__input filter-price__input--to" name="price-to" data-to type="text">
+                    </div>
+                    <div id="range" class="filter-price__range"></div>
+                  </div>
+                </div>
+              </details>
+              <details data-open class="body-filter__item item-filter spollers__item">
+                <summary class="item-filter__header spollers__title">
+                  <label for="color" title="Підказка" class="item-filter__label">
+                    Colors
+                  </label>
+                  <div class="item-filter__icon _icon-Frame"></div>
+                </summary>
+                <div class="item-filter__body filter-colors spollers__body">
+                  <div class="filter-colors">
+                    <div class="filter-colors__color color-options-product">
+                      <div class="color-options-product__items">
+                        <label class="color-options-product__item">
+                          <input checked class="color-options-product__input" type="checkbox" name="color">
+                          <img class="color-options-product__image" src="@img/colors/ellipse_01.svg" alt="color 01">
+                        </label>
+                        <label class="color-options-product__item">
+                          <input class="color-options-product__input" type="checkbox" name="color">
+                          <img src="@img/colors/ellipse_02.svg" alt="color 02">
+                        </label>
+                        <label class="color-options-product__item">
+                          <input class="color-options-product__input" type="checkbox" name="color">
+                          <img src="@img/colors/ellipse_03.svg" alt="color 03">
+                        </label>
+                        <label class="color-options-product__item">
+                          <input class="color-options-product__input" type="checkbox" name="color">
+                          <img src="@img/colors/ellipse_04.svg" alt="color 04">
+                        </label>
+                        <label class="color-options-product__item">
+                          <input class="color-options-product__input" type="checkbox" name="color">
+                          <img src="@img/colors/ellipse_05.svg" alt="color 05">
+                        </label>
+                      </div>
+                    </div>
+                    <div id="range" class="filter-price__range"></div>
+                  </div>
+                </div>
+              </details>
+              <details data-open class="body-filter__item item-filter spollers__item">
+                <summary class="item-filter__header spollers__title">
+                  <label for="size" title="Підказка" class="item-filter__label">Size</label>
+                  <div class="item-filter__icon _icon-Frame"></div>
+                </summary>
+                <div class="item-filter__body filter-size spollers__body">
+                  <div class="filter-size">
+                    <div class="filter-size__size options-product">
+                      <div class="options-product__size options">
+                        <div class="options__item">
+                          <input id="o_1" class="options__input" type="checkbox" value="1" name="option">
+                          <label for="o_1" class="options__label"><span class="options__text">XX-Small</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_2" class="options__input" type="checkbox" value="2" name="option">
+                          <label for="o_2" class="options__label"><span class="options__text">XX-Small</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_3" class="options__input" type="checkbox" value="3" name="option">
+                          <label for="o_3" class="options__label"><span class="options__text">XX-Small</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input checked id="o_4" class="options__input" type="radio" value="4" name="option">
+                          <label for="o_4" class="options__label"><span class="options__text">Medium</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_5" class="options__input" type="radio" value="5" name="option">
+                          <label for="o_5" class="options__label"><span class="options__text">Large</span></label>
+                        </div>
+                        <div class="options__item">
+                          <input id="o_6" class="options__input" type="radio" value="6" name="option">
+                          <label for="o_6" class="options__label"><span class="options__text">X-Large</span></label>
+                        </div>
+                      </div>
+                    </div>
+                    <div id="range" class="filter-price__range"></div>
+                  </div>
+                </div>
+              </details>
+              <button type="submit" class="body-filter__button button">Apply Filter</button>
+            </form>
+          </aside>
+          <section class="category__body body-category">
+            <div class="body-category__header header-body-category">
+              <h2 class="header-body-category__title">Casual</h2>
+              <div class="header-body-category__sort sort-category">
+                <div class="sort-category__showing">Showing 1-10 of 100 Products</div>
+                <div class="sort-category__text">Sort by:</div>
+                <select class="select select__sort-category" name="sort-category[]" data-class-modif="sort-category">
+                  <option data-class="sort-category" value="1" selected>Most Popular</option>
+                  <option data-class="sort-category" value="2">Пункт №2</option>
+                  <option data-class="sort-category" value="3">Пункт №3</option>
+                  <option data-class="sort-category" value="4">Пункт №4</option>
+                </select>
+              </div>
+            </div>
+            <div class="body-category__list">
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/like/image_02.png" alt="Image Gradient Graphic T-shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">Gradient Graphic T-<span>shirt</span></a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star stars-raiting__star--star05"></div>
+                    </div>
+                    <div class="opinion__number">3.5/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$145</div>
+                  <!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/like/image_03.png" alt="Image Polo with Tipping Details">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">Polo with Tipping Details</a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star stars-raiting__star--star05"></div>
+                    </div>
+                    <div class="opinion__number">4.5/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$180</div>
+                  <!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/like/image_04.png" alt="Image Black Striped T-shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">Black Striped T-<span>shirt</span></a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                    </div>
+                    <div class="opinion__number">5.0/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$120</div>
+                  <div class="price-product__old">$150</div>
+                  <div class="price-product__persent">-30%</div>
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/arrivals/image_02.png" alt="Image skinny fit jeans">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">skinny fit jeans</a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star stars-raiting__star--star05"></div>
+                    </div>
+                    <div class="opinion__number">3.5/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$240</div>
+                  <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div>
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/arrivals/image_03.png" alt="Image checkered shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">checkered shirt</a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star stars-raiting__star--star05"></div>
+                    </div>
+                    <div class="opinion__number">4.5/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$180</div>
+                  <!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/arrivals/image_04.png" alt="Image sleeve striped t-shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">sleeve striped t-<span>shirt</span></a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star stars-raiting__star--star05"></div>
+                    </div>
+                    <div class="opinion__number">4.5/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$130</div>
+                  <div class="price-product__old">$160</div>
+                  <div class="price-product__persent">-30%</div>
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/selling/image_01.png" alt="Image vertical striped shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">vertical striped shirt</a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                    </div>
+                    <div class="opinion__number">5.0/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$212</div>
+                  <div class="price-product__old">$232</div>
+                  <div class="price-product__persent">-20%</div>
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/selling/image_02.png" alt="Image vertical striped shirt">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">courage graphic t-<span>shirt</span></a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                    </div>
+                    <div class="opinion__number">4.0/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$145</div>
+                  <!-- <div class="price-product__old">$232</div>
+                  <div class="price-product__persent">-20%</div> -->
+                </div>
+              </article>
+              <article class="body-category__item item-product">
+                <a href="#" class="item-product__link">
+                  <img class="item-product__image" src="@img/selling/image_03.png" alt="Image loose fit bermuda shorts">
+                </a>
+                <div class="item-product__content">
+                  <h4 class="item-product__title">
+                    <a href="#" class="item-product__title-link">loose fit bermuda shorts</a>
+                  </h4>
+                  <div class="item-product__opinion opinion">
+                    <div class="opinion__rating stars-raiting">
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                      <div class="stars-raiting__star"></div>
+                    </div>
+                    <div class="opinion__number">3.0/5</div>
+                  </div>
+                </div>
+                <div class="item-product__price price-product">
+                  <div class="price-product__current">$80</div>
+                  <!-- <div class="price-product__old">$232</div>
+                  <div class="price-product__persent">-20%</div> -->
+                </div>
+              </article>
+            </div>
+            <ul class="body-category__pages pages-body-category">
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link _icon-arrow-left" href="#">Previous</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">1</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">2</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">3</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">...</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">8</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">9</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link" href="#">10</a>
+              </li>
+              <li class="pages-body-category__item">
+                <a class="pages-body-category__link _icon-arrow-right" href="#">Next</a>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+      <section class="category__offers offers-section">
+        <div class="offers-section__container">
+          <form class="offers-section__offers offers" action="#" enctype="multipart/form-data">
+            <h2 class="offers__title title title--white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+            <div class="offers__form">
+              <div class="offers__body">
+                <input autocomplete="off" type="email" name="form[mail]" data-error="Помилка" placeholder="Enter your email address" class="offers__input input input--white">
+                <span class="offers__icon _icon-envelope"></span>
+              </div>
+              <button class="offers__button button button--white" type="submit">Subscribe to Newsletter</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

@@ -13,7 +13,7 @@ function windowLoaded() {
   //   }
   // };
 
-  //* Додавання классу .search-open до тегу <head>
+  //* Додавання класів .ім'я-класу_open до тегу <head>
   let documentActions = (e) => {
     const targetElement = e.target;
     const typeEvent = e.type;
@@ -54,6 +54,7 @@ function windowLoaded() {
     const halfOffersHeight = offersHeight / 2;
     const pageOffers = document.querySelector(".page__offers");
     const productOffers = document.querySelector(".product__offers");
+    const categoryOffers = document.querySelector(".category__offers");
     const footer = document.querySelector(".footer");
     if (pageOffers) {
       pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
@@ -61,6 +62,10 @@ function windowLoaded() {
     }
     if (productOffers) {
       productOffers.style.marginBottom = `${-halfOffersHeight}px`;
+      footer.style.paddingTop = `${halfOffersHeight}px`;
+    }
+    if (categoryOffers) {
+      categoryOffers.style.marginBottom = `${-halfOffersHeight}px`;
       footer.style.paddingTop = `${halfOffersHeight}px`;
     }
   }
@@ -92,6 +97,7 @@ function windowLoaded() {
     const arrivalsItems = document.querySelector(".arrivals__items");
     const sellingItems = document.querySelector(".selling__items");
     const likeItems = document.querySelector(".like__items");
+
     const itemProductHeight = itemProduct.offsetHeight;
 
     if (arrivalsItems) {

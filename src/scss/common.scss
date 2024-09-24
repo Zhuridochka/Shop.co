@@ -402,9 +402,11 @@
 
   // .activity-review__list
   &__list {
-    display: none;
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
     flex-direction: column;
-    row-gap: toRem(15);
+    row-gap: toRem(10);
     position: absolute;
     top: calc(100% - toRem(1));
     inset-inline-end: 0;
@@ -415,11 +417,13 @@
     border-radius: toRem(8);
 
     &--open {
-      display: flex; // Відкриваємо список
+      opacity: 1;
+      visibility: visible;
     }
 
     &--close {
-      display: none; // Закриваємо список
+      opacity: 0;
+      visibility: hidden;
     }
   }
 

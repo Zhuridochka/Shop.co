@@ -82,6 +82,7 @@
 
   // .main-header__container
   &__container {
+    position: relative;
     display: flex;
     align-items: center;
     column-gap: toRem(40);
@@ -114,7 +115,7 @@
 
 .search-header {
   flex-grow: 1;
-  position: relative;
+  // position: relative;
 
   @media (max-width:$mobileSmall) {
     flex-grow: 0;
@@ -186,8 +187,23 @@
     }
 
     @media (max-width:$mobileSmall) {
-      display: none;
+      block-size: toRem(46);
+      position: absolute;
+      inline-size: 95%;
+      inset-block-start: calc(100% + toRem(10));
+      inset-inline-start: 0;
+      background-color: #fff;
+      outline: toRem(1) solid $mainColor60;
+      padding-inline: toRem(10);
+      padding-block: toRem(10);
+      margin-inline-start: toRem(10);
+      opacity: 0;
+      visibility: hidden;
 
+      .search-open & {
+        opacity: 1;
+        visibility: visible;
+      }
     }
   }
 
