@@ -29,6 +29,10 @@
 				background-color: $mainColor20;
 			}
 		}
+
+		.select_popular & {
+			background-color: transparent;
+		}
 	}
 
 	// .select__value

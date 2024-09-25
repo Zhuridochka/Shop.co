@@ -50,15 +50,15 @@
               <details data-open class="form-filter__item item-filter spollers__item">
                 <summary class="item-filter__header spollers__title">
                   Price
-                  <div class="item-filter__icon _icon-Frame"></div>
+                  <!-- <div class="item-filter__icon _icon-Frame"></div> -->
                 </summary>
                 <div class="item-filter__body filter-price spollers__body">
                   <div class="filter-price">
+                    <div class="filter-price__range"></div>
                     <div class="filter-price__inner">
-                      <input id="price-start" class="filter-price__input filter-price__input--from" name="price-from" data-from="" type="text">
-                      <input id="price-end" class="filter-price__input filter-price__input--to" name="price-to" data-to type="text">
+                      <input id="price-start" class="filter-price__input filter-price__input--from" name="price-from" type="text" data-from="">
+                      <input id="price-end" class="filter-price__input filter-price__input--to" name="price-to" type="text" data-to="">
                     </div>
-                    <div id="range" class="filter-price__range"></div>
                   </div>
                 </div>
               </details>
@@ -146,12 +146,13 @@
               <h2 class="header-body-category__title">Casual</h2>
               <div class="header-body-category__sort sort-category">
                 <div class="sort-category__showing">Showing 1-10 of 100 Products</div>
+
                 <div class="sort-category__text">Sort by:</div>
-                <select class="select select__sort-category" name="sort-category[]" data-class-modif="sort-category">
-                  <option data-class="sort-category" value="1" selected>Most Popular</option>
-                  <option data-class="sort-category" value="2">Пункт №2</option>
-                  <option data-class="sort-category" value="3">Пункт №3</option>
-                  <option data-class="sort-category" value="4">Пункт №4</option>
+                <select class="select" name="popular[]" data-class-modif="popular">
+                  <option value="1" selected>Most Popular</option>
+                  <option value="2">Пункт №2</option>
+                  <option value="3">Пункт №3</option>
+                  <option value="4">Пункт №4</option>
                 </select>
               </div>
             </div>
