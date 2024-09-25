@@ -40,9 +40,15 @@
 		display: flex;
 		min-width: 0;
 		align-items: center;
-		height: toRem(48);
+		block-size: toRem(48);
 		padding: toRem(16) toRem(20);
 		gap: toRem(21);
+
+		.select_popular & {
+			padding: toRem(0);
+			gap: toRem(4);
+			block-size: auto;
+		}
 
 		>* {
 			flex: 1 1 auto;
