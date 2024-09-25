@@ -146,14 +146,15 @@
               <h2 class="header-body-category__title">Casual</h2>
               <div class="header-body-category__sort sort-category">
                 <div class="sort-category__showing">Showing 1-10 of 100 Products</div>
-
-                <div class="sort-category__text">Sort by:</div>
-                <select class="select" name="popular[]" data-class-modif="popular">
-                  <option value="1" selected>Most Popular</option>
-                  <option value="2">Пункт №2</option>
-                  <option value="3">Пункт №3</option>
-                  <option value="4">Пункт №4</option>
-                </select>
+                <form class="sort-category__form" action="#">
+                  <label class="sort-category__text">Sort by:</label>
+                  <select class="select" name="popular[]" data-class-modif="popular">
+                    <option value="Most Popular" selected>Most Popular</option>
+                    <option value="2">Point №2</option>
+                    <option value="3">Point №3</option>
+                    <option value="4">Point №4</option>
+                  </select>
+                </form>
               </div>
             </div>
             <div class="body-category__list">
@@ -378,35 +379,37 @@
                 </div>
               </article>
             </div>
-            <ul class="body-category__pages pages-body-category">
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link _icon-arrow-left" href="#">Previous</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">1</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">2</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">3</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">...</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">8</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">9</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link" href="#">10</a>
-              </li>
-              <li class="pages-body-category__item">
-                <a class="pages-body-category__link _icon-arrow-right" href="#">Next</a>
-              </li>
-            </ul>
+            <div class="body-category__pages pages-body-category">
+              <div class="pages-body-category__previous">
+                <a class="pages-body-category__previous-link _icon-arrow-left" href="#">Previous</a>
+              </div>
+              <ul class="pages-body-category__list">
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">1</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">2</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">3</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">...</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">8</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">9</a>
+                </li>
+                <li class="pages-body-category__item">
+                  <a class="pages-body-category__link" href="#">10</a>
+                </li>
+              </ul>
+              <div class="pages-body-category__next">
+                <a class="pages-body-category__next-link _icon-arrow-right" href="#">Next</a>
+              </div>
+            </div>
           </section>
         </div>
       </div>
