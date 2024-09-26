@@ -571,3 +571,198 @@
     @include adaptiveValue("font-size", 36, 24, 0, 1440, 390);
   }
 }
+
+//=================================================================
+//===Sidebar-catalog
+.sidebar-catalog {
+  display: flex;
+  flex-direction: column;
+  row-gap: toRem(20);
+
+  // .sidebar-catalog__item
+  &__item {
+    @media (any-hover: hover) {
+      &:hover {
+        .sidebar-catalog__link {
+          transform: translate(toRem(2), toRem(-1)) scale(1.05);
+          color: $mainColor;
+        }
+      }
+    }
+  }
+
+  // .sidebar-catalog__link
+  &__link {
+    color: $mainColor60;
+    //text-transform: capitalize;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row-reverse;
+    transition: all 0.4s;
+
+    &::before {
+      inline-size: toRem(16);
+      aspect-ratio: 1;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(15);
+      transform: rotate(-90deg);
+    }
+  }
+}
+
+//=================================================================
+//===Breadcrumbs
+.breadcrumbs {
+  border-block-start: toRem(1) solid $mainColor10;
+  padding-block-start: toRem(34);
+  padding-block-end: toRem(36);
+
+  // .breadcrumbs__container
+  &__container {}
+
+  // .breadcrumbs__list
+  &__list {
+    display: flex;
+    align-items: center;
+    column-gap: toRem(12);
+  }
+
+  // .breadcrumbs__item
+  &__item {
+    color: $mainColor;
+
+    &:not(:last-child) {
+      display: flex;
+      align-items: center;
+      column-gap: toRem(4);
+      flex-direction: row-reverse;
+      transition: text-decoration 0.4s;
+    }
+
+    &::before {
+      inline-size: toRem(16);
+      flex-basis: toRem(16);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: toRem(16);
+      transform: rotate(-90deg);
+    }
+
+    @media (any-hover: hover) {
+      &:hover {
+        .breadcrumbs__link {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+
+  // .breadcrumbs__link
+  &__link {
+    text-transform: capitalize;
+    color: $mainColor60;
+
+    span {
+      text-transform: lowercase;
+    }
+  }
+
+  @media (max-width:$mobile) {
+    padding-block-start: toRem(24);
+    padding-block-end: toRem(12);
+  }
+}
+
+//=================================================================
+//===Color-options-product
+.color-options-product {
+
+  // .color-options-product__items
+  &__items {
+    display: flex;
+    column-gap: toRem(16);
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  // .color-options-product__item
+  &__item {
+    position: relative;
+    inline-size: toRem(37);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    border-radius: 50%;
+    overflow: hidden;
+  }
+
+  // .color-options-product__input
+  &__input {
+    position: absolute;
+    inline-size: 100%;
+    block-size: 100%;
+    cursor: pointer;
+    appearance: none;
+
+    &:checked {
+      background: url('../img/iconfonts/chek-mark.svg') center center / 16px no-repeat;
+    }
+  }
+
+  // .color-options-product__image  
+  &__image {
+    inline-size: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+  }
+
+  // .color-options-product--categ  
+  &--categ {
+
+    // .color-options-product__items
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(37px, 1fr));
+      column-gap: toRem(10);
+      row-gap: toRem(16);
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    // .color-options-product__item
+    &__item {
+      position: relative;
+      inline-size: toRem(37);
+      aspect-ratio: 1;
+      flex-shrink: 0;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    // .color-options-product__input
+    &__input {
+      position: absolute;
+      inline-size: 100%;
+      block-size: 100%;
+      cursor: pointer;
+      appearance: none;
+
+      &:checked {
+        background: url('../img/iconfonts/chek-mark.svg') center center / 16px no-repeat;
+      }
+    }
+
+    // .color-options-product__image  
+    &__image {
+      inline-size: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+    }
+  }
+
+}

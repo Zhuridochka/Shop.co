@@ -33,61 +33,18 @@
 //====================================================================================================
 //===Breadcrumbs
 .breadcrumbs {
-  border-block-start: toRem(1) solid $mainColor10;
-  padding-block-start: toRem(34);
-  padding-block-end: toRem(36);
 
   // .breadcrumbs__container
   &__container {}
 
   // .breadcrumbs__list
-  &__list {
-    display: flex;
-    align-items: center;
-    column-gap: toRem(12);
-  }
+  &__list {}
 
   // .breadcrumbs__item
-  &__item {
-    color: $mainColor;
-
-    &:not(:last-child) {
-      display: flex;
-      align-items: center;
-      column-gap: toRem(4);
-      flex-direction: row-reverse;
-      transition: text-decoration 0.4s;
-    }
-
-    &::before {
-      inline-size: toRem(16);
-      flex-basis: toRem(16);
-      flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: toRem(16);
-      transform: rotate(-90deg);
-    }
-
-    @media (any-hover: hover) {
-      &:hover {
-        .breadcrumbs__link {
-          text-decoration: underline;
-        }
-      }
-    }
-  }
+  &__item {}
 
   // .breadcrumbs__link
-  &__link {
-    text-transform: capitalize;
-    color: $mainColor60;
-
-    span {
-      text-transform: lowercase;
-    }
-  }
+  &__link {}
 }
 
 //====================================================================================================
@@ -310,54 +267,14 @@
   }
 
   // .options-product__color
-  &__color {}
+  &__color {
+    column-gap: toRem(16);
+  }
 
   // .options-product__size
   &__size {}
 }
 
-.color-options-product {
-
-  // .color-options-product__items
-  &__items {
-    display: flex;
-    column-gap: toRem(16);
-    flex-wrap: wrap;
-    align-items: center;
-  }
-
-  // .color-options-product__item
-  &__item {
-    position: relative;
-    inline-size: toRem(37);
-    aspect-ratio: 1;
-    flex-shrink: 0;
-    border-radius: 50%;
-    overflow: hidden;
-
-  }
-
-  // .color-options-product__input
-  &__input {
-    position: absolute;
-    inline-size: 100%;
-    block-size: 100%;
-    cursor: pointer;
-    appearance: none;
-
-    &:checked {
-      background: url('../img/iconfonts/chek-mark.svg') center center / 16px no-repeat;
-    }
-  }
-
-  // .color-options-product__image  
-  &__image {
-    inline-size: 100%;
-    aspect-ratio: 1;
-    object-fit: cover;
-  }
-
-}
 
 .buy-actions-product {
   padding-block-start: toRem(24);

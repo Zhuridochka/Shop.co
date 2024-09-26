@@ -4,9 +4,23 @@
 .footer {
   background-color: $bgMain;
 
+  .filter-open & {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      inset-block-start: 0;
+      inset-inline-start: 0;
+      inline-size: 100%;
+      block-size: 100%;
+      background-color: $mainColor20;
+    }
+  }
+
   // .footer__container
   &__container {
-    // @include adaptiveValue("padding-block-start", 50, 30, 0, 1440, 390);
+    // @include adaptiveValue("padding-block-start", 50, 30, 0, 1440, 390);  
   }
 
   // .footer__main

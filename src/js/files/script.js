@@ -31,6 +31,14 @@ function windowLoaded() {
     } else if (!targetElement.closest(".menu__item")) {
       document.documentElement.classList.remove("shop-open");
     }
+
+    if (targetElement.closest(".filter__button-filtr")) {
+      if (window.innerWidth < 768) {
+        document.documentElement.classList.toggle("filter-open");
+      }
+    } else if (!targetElement.closest(".content-category__filter")) {
+      document.documentElement.classList.remove("filter-open");
+    }
   };
 
   //* Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
