@@ -21,6 +21,25 @@
 }
 
 // Заголовок спойлера
+
+// .item-filter {
+
+// 	// .item-filter__header
+
+// 	&__header {}
+// }
+
+// .spollers {
+
+// 	// .spollers__title
+
+// 	&__title {
+
+// 		// .spollers__title--filter
+
+// 		&--filter {}
+// 	}
+// }
 .spollers__title {
 	width: 100%;
 	cursor: default;
@@ -108,6 +127,53 @@
 
 	@media (max-width:$tablet) {
 		margin-block-end: toRem(16);
+	}
+
+	// .spollers__title--filter
+
+	&--filter {
+		font-family: 'Satoshi', sans-serif;
+		font-size: toRem(20);
+		color: $mainColor;
+		font-weight: 700;
+		line-height: 1;
+		letter-spacing: toRem(0);
+		margin-block-end: toRem(20);
+
+		._spoller-init & {
+			cursor: pointer;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: 0px;
+				top: 50%;
+				background-color: #000;
+				height: 1px;
+				width: 7.5px;
+				transition: transform 0.4s ease 0s;
+			}
+
+			&::before {
+				transform: translate(-75%, -50%) rotate(40deg);
+			}
+
+			&::after {
+				transform: translate(0, -50%) rotate(-40deg);
+			}
+
+			&._spoller-active {
+				&::before {
+					transform: translateX(-75%) rotate(-40deg);
+				}
+
+				&::after {
+					transform: rotate(40deg);
+				}
+			}
+
+		}
 	}
 }
 

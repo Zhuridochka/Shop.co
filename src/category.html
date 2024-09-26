@@ -46,28 +46,16 @@
                 </li>
               </ul>
             </div>
-            <form action="#" data-spollers class="filter__form form-filter form spollers">
+            <form action="#" data-spollers class="filter__form form-filter spollers">
               <details data-open class="form-filter__item item-filter spollers__item">
-                <summary class="item-filter__header spollers__title">
-                  Price
-                  <!-- <div class="item-filter__icon _icon-Frame"></div> -->
-                </summary>
+                <summary class="item-filter__header spollers__title spollers__title--filter">Price</summary>
                 <div class="item-filter__body filter-price spollers__body">
-                  <div class="filter-price">
-                    <div class="filter-price__range"></div>
-                    <div class="filter-price__inner">
-                      <input id="price-start" class="filter-price__input filter-price__input--from" name="price-from" type="text" data-from="">
-                      <input id="price-end" class="filter-price__input filter-price__input--to" name="price-to" type="text" data-to="">
-                    </div>
-                  </div>
+                  <div class="filter-price__range"></div>
                 </div>
               </details>
-              <details data-open class="body-filter__item item-filter spollers__item">
-                <summary class="item-filter__header spollers__title">
-                  <label for="color" title="Підказка" class="item-filter__label">
-                    Colors
-                  </label>
-                  <div class="item-filter__icon _icon-Frame"></div>
+              <details data-open class="form-filter__item item-filter spollers__item">
+                <summary class="item-filter__header spollers__title spollers__title--filter">
+                  <label for="color" title="Підказка" class="item-filter__label">Colors</label>
                 </summary>
                 <div class="item-filter__body filter-colors spollers__body">
                   <div class="filter-colors">
@@ -95,53 +83,61 @@
                         </label>
                       </div>
                     </div>
-                    <div id="range" class="filter-price__range"></div>
                   </div>
                 </div>
               </details>
-              <details data-open class="body-filter__item item-filter spollers__item">
-                <summary class="item-filter__header spollers__title">
+              <details data-open class="form-filter__item item-filter spollers__item">
+                <summary class="item-filter__header spollers__title spollers__title--filter">
                   <label for="size" title="Підказка" class="item-filter__label">Size</label>
-                  <div class="item-filter__icon _icon-Frame"></div>
                 </summary>
                 <div class="item-filter__body filter-size spollers__body">
-                  <div class="filter-size">
-                    <div class="filter-size__size options-product">
-                      <div class="options-product__size options">
-                        <div class="options__item">
-                          <input id="o_1" class="options__input" type="checkbox" value="1" name="option">
-                          <label for="o_1" class="options__label"><span class="options__text">XX-Small</span></label>
-                        </div>
-                        <div class="options__item">
-                          <input id="o_2" class="options__input" type="checkbox" value="2" name="option">
-                          <label for="o_2" class="options__label"><span class="options__text">XX-Small</span></label>
-                        </div>
-                        <div class="options__item">
-                          <input id="o_3" class="options__input" type="checkbox" value="3" name="option">
-                          <label for="o_3" class="options__label"><span class="options__text">XX-Small</span></label>
-                        </div>
-                        <div class="options__item">
-                          <input checked id="o_4" class="options__input" type="radio" value="4" name="option">
-                          <label for="o_4" class="options__label"><span class="options__text">Medium</span></label>
-                        </div>
-                        <div class="options__item">
-                          <input id="o_5" class="options__input" type="radio" value="5" name="option">
-                          <label for="o_5" class="options__label"><span class="options__text">Large</span></label>
-                        </div>
-                        <div class="options__item">
-                          <input id="o_6" class="options__input" type="radio" value="6" name="option">
-                          <label for="o_6" class="options__label"><span class="options__text">X-Large</span></label>
-                        </div>
+                  <div class="filter-size__size options-product">
+                    <div class="options-product__size options">
+                      <div class="options__item">
+                        <input id="o_1" class="options__input" type="checkbox" value="1" name="option">
+                        <label for="o_1" class="options__label"><span class="options__text">XX-Small</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_2" class="options__input" type="checkbox" value="2" name="option">
+                        <label for="o_2" class="options__label"><span class="options__text">X-Small</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_3" class="options__input" type="checkbox" value="3" name="option">
+                        <label for="o_3" class="options__label"><span class="options__text">Small</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_4" class="options__input" type="radio" value="4" name="option">
+                        <label for="o_4" class="options__label"><span class="options__text">Medium</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input checked id="o_5" class="options__input" type="radio" value="5" name="option">
+                        <label for="o_5" class="options__label"><span class="options__text">Large</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_6" class="options__input" type="radio" value="6" name="option">
+                        <label for="o_6" class="options__label"><span class="options__text">X-Large</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_7" class="options__input" type="radio" value="7" name="option">
+                        <label for="o_7" class="options__label"><span class="options__text">XX-Large</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_8" class="options__input" type="radio" value="8" name="option">
+                        <label for="o_8" class="options__label"><span class="options__text">3X-Large</span></label>
+                      </div>
+                      <div class="options__item">
+                        <input id="o_9" class="options__input" type="radio" value="9" name="option">
+                        <label for="o_9" class="options__label"><span class="options__text">4X-Large</span></label>
                       </div>
                     </div>
-                    <div id="range" class="filter-price__range"></div>
                   </div>
+
                 </div>
               </details>
-              <button type="submit" class="body-filter__button button">Apply Filter</button>
+              <button type="submit" class="form-filter__button button button--filter">Apply Filter</button>
             </form>
           </aside>
-          <section class="category__body body-category">
+          <section class="content-category__body body-category">
             <div class="body-category__header header-body-category">
               <h2 class="header-body-category__title">Casual</h2>
               <div class="header-body-category__sort sort-category">
