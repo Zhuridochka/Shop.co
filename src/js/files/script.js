@@ -32,13 +32,13 @@ function windowLoaded() {
       document.documentElement.classList.remove("shop-open");
     }
 
-    if (targetElement.closest(".filter__button-filtr")) {
-      if (window.innerWidth < 768) {
-        document.documentElement.classList.toggle("filter-open");
-      }
-    } else if (!targetElement.closest(".content-category__filter")) {
-      document.documentElement.classList.remove("filter-open");
-    }
+    // if (targetElement.closest(".filter__button-filtr")) {
+    //   if (window.innerWidth < 768) {
+    //     document.documentElement.classList.toggle("filter-open");
+    //   }
+    // } else if (!targetElement.closest(".content-category__filter")) {
+    //   document.documentElement.classList.remove("filter-open");
+    // }
   };
 
   //* Функція для визначення висоти потрібних об'єктів і додавання стилів динамічних відступів до потрібних об'єктів
@@ -60,22 +60,15 @@ function windowLoaded() {
     const offersObject = document.querySelector(".offers");
     const offersHeight = offersObject.offsetHeight;
     const halfOffersHeight = offersHeight / 2;
-    const pageOffers = document.querySelector(".page__offers");
-    const productOffers = document.querySelector(".product__offers");
-    const categoryOffers = document.querySelector(".category__offers");
+    const offersPages = document.querySelectorAll(".offers-section");
     const footer = document.querySelector(".footer");
-    if (pageOffers) {
-      pageOffers.style.marginBottom = `${-halfOffersHeight}px`;
-      footer.style.paddingTop = `${halfOffersHeight}px`;
-    }
-    if (productOffers) {
-      productOffers.style.marginBottom = `${-halfOffersHeight}px`;
-      footer.style.paddingTop = `${halfOffersHeight}px`;
-    }
-    if (categoryOffers) {
-      categoryOffers.style.marginBottom = `${-halfOffersHeight}px`;
-      footer.style.paddingTop = `${halfOffersHeight}px`;
-    }
+
+    offersPages.forEach((offersPage) => {
+      if (offersPage) {
+        offersPage.style.marginBottom = `${-halfOffersHeight}px`;
+        footer.style.paddingTop = `${halfOffersHeight}px`;
+      }
+    });
   }
 
   updateHeightObjectsPageOffers();

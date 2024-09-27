@@ -4,6 +4,7 @@
 	width: 170px;
 	height: 52px;
 	display: flex;
+	justify-content: space-between;
 	background-color: $bgMain;
 	border-radius: toRem(62);
 	padding-inline: toRem(20);
@@ -11,7 +12,7 @@
 
 	// .quantity__button
 	&__button {
-		flex: 0 0 30px;
+		flex: 0 0 20px;
 		position: relative;
 		cursor: pointer;
 

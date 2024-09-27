@@ -162,21 +162,7 @@
         }
       }
     }
-
-    @media (any-hover: hover) {
-      &:hover span {
-        &:first-child {
-          transform: translate(0, -100%) scale(0);
-        }
-
-        &:last-child {
-          transform: translate(0, -100%) scale(1);
-        }
-      }
-    }
   }
-
-  //*Переробити не під ховер а під клас відкриття
 
   // .filter__body
   &__body {
