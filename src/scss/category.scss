@@ -1,5 +1,5 @@
 //====================================================================================================
-//===
+//===Category
 .category {
   @media (max-width:$mobile) {
     position: relative;
@@ -102,7 +102,6 @@
       z-index: 2;
       inline-size: 100%;
       block-size: auto;
-      // overflow-y: auto;
     }
   }
 
@@ -118,50 +117,6 @@
   &__title {
     font-size: toRem(20);
     font-weight: 700;
-  }
-
-  // .filter__button-filtr
-  &__button-filtr {
-    // inline-size: toRem(24);
-    // block-size: toRem(24);
-    // aspect-ratio: 1;
-    // flex-shrink: 0;
-
-    // span {
-    //   display: flex;
-    //   align-items: center;
-    //   justify-content: center;
-    //   transition: all 0.4s;
-
-    //   &::before {
-    //     inline-size: toRem(24);
-    //     aspect-ratio: 1;
-    //     flex-shrink: 0;
-    //     display: flex;
-    //     align-items: center;
-    //     justify-content: center;
-    //     color: $mainColor60;
-    //     font-size: toRem(20);
-    //   }
-
-    //   &:first-child {}
-
-    //   &:last-child {
-    //     transform: translate(0, 0) scale(0);
-    //   }
-    // }
-
-    // .filter-open & {
-    //   span {
-    //     &:first-child {
-    //       transform: translate(0, -100%) scale(0);
-    //     }
-
-    //     &:last-child {
-    //       transform: translate(0, -100%) scale(1);
-    //     }
-    //   }
-    // }
   }
 
   // .filter__body
@@ -240,33 +195,8 @@
 .filter-colors {
 
   // .filter-colors__color
-
   &__color {}
 }
-
-// .color-options-product {
-
-//   // .color-options-product__items
-//   &__items {
-//     display: flex;
-//     align-items: center;
-//     column-gap: auto;
-//     row-gap: toRem(16);
-//   }
-
-//   // .color-options-product__item
-//   &__item {
-//     inline-size: toRem(37);
-//     aspect-ratio: 1;
-//     flex-shrink: 0;
-//   }
-
-//   // .color-options-product__input
-//   &__input {}
-
-//   // .color-options-product__image
-//   &__image {}
-// }
 
 .filter-size {
 
@@ -278,9 +208,7 @@
   gap: toRem(8);
 
   // .options__item
-  &__item {
-    // padding: toRem(10) toRem(20);
-  }
+  &__item {}
 
   // .options__input
   &__input {}
@@ -358,7 +286,6 @@
     }
   }
 }
-
 
 .sort-category {
   display: flex;

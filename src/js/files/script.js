@@ -32,6 +32,7 @@ function windowLoaded() {
       document.documentElement.classList.remove("shop-open");
     }
 
+    //* Подія при кліку на кнопку фільтру для показу секції Filter
     if (targetElement.closest(".filter-button")) {
       if (window.innerWidth < 768) {
         document.documentElement.classList.toggle("filter-open");
@@ -211,6 +212,37 @@ function windowLoaded() {
   //     });
   //   });
   // }
+
+  //* Подія для видалення карток товарів з корзини при натисканні на кнопку смітника
+  const deleteButtons = document.querySelectorAll(".item-cart__trash");
+
+  if (deleteButtons.length > 0) {
+    deleteButtons.forEach((button) => {
+      button.addEventListener("click", function (e) {
+        const cartItem = button.closest(".item-cart");
+        console.log(cartItem);
+
+        if (cartItem) {
+          cartItem.remove();
+        }
+      });
+    });
+  }
+
+  //* Функція для закриття верхньої частини шапки
+  function closeTopHeader() {
+    const topHeader = document.querySelector(".top-header");
+    if (!topHeader) return;
+    const buttonClose = document.querySelector(".top-header__icon");
+
+    buttonClose.addEventListener("click", function (e) {
+      if (topHeader) {
+        topHeader.remove();
+      }
+    });
+  }
+
+  closeTopHeader();
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);
