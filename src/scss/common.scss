@@ -766,3 +766,142 @@
   }
 
 }
+
+//=================================================================
+//===Item-cart
+.item-cart {
+
+  // .item-cart__body
+  &__body {
+    display: flex;
+    column-gap: toRem(16);
+  }
+
+  // .item-cart__link
+  &__link {
+    flex-basis: toRem(124);
+    flex-grow: 1;
+    flex-shrink: 0;
+    border-radius: toRem(8.658);
+    background-color: $bgColor;
+  }
+
+  // .item-cart__img
+  &__img {
+    inline-size: 100%;
+    block-size: 100%;
+    aspect-ratio: 1;
+    object-fit: cover;
+    border-radius: toRem(8.658);
+    background-color: $bgColor;
+  }
+
+  // .item-cart__content
+  &__content {
+    flex-basis: toRem(527);
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .item-cart__top
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(20);
+  }
+
+  // .item-cart__title
+  &__title {
+    font-size: toRem(20);
+    font-weight: 700;
+    line-height: 1.35;
+    /* 27/20 */
+
+    @media (any-hover: hover) {
+      &:hover {
+        .item-cart__title-link {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(16);
+    }
+  }
+
+  // .item-cart__title-link
+  &__title-link {
+    text-transform: capitalize;
+
+    span {
+      text-transform: lowercase;
+      transition: text-decoration 0.4s;
+    }
+  }
+
+  // .item-cart__trash
+  &__trash {
+    inline-size: toRem(24);
+    aspect-ratio: 1;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &::before {
+      font-size: toRem(19.5);
+      color: #FF3333;
+    }
+  }
+
+  // .item-cart__data
+  &__data {
+    display: flex;
+    flex-direction: column;
+
+    &:not(:last-child) {
+      margin-block-end: toRem(15);
+    }
+  }
+
+  // .item-cart__bottom
+  &__bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: toRem(20);
+  }
+
+  // .item-cart__price
+  &__price {}
+
+  // .item-cart__quantity  
+  &__quantity {}
+}
+
+.data-cart {
+
+  // .data-cart__item
+  &__item {
+    font-size: toRem(14);
+    line-height: 135.714286%;
+    /* 19/14 */
+
+    span {
+      color: $mainColor60;
+    }
+  }
+
+  // .data-cart__label
+  &__label {}
+}
+
+.price-product {
+
+  // .price-product__current
+  &__current {}
+
+}

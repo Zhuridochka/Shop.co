@@ -3,7 +3,9 @@
 
 .button {
 	display: inline-flex;
-	padding: toRem(16) toRem(54);
+	align-items: center;
+	padding-block: toRem(16);
+	padding-inline: toRem(54);
 	justify-content: center;
 	background-color: $mainColor;
 	border-radius: toRem(62);
@@ -12,6 +14,11 @@
 	/* 22/16 */
 	color: #fff;
 	transition: all 0.4s;
+
+	@media (max-width:$mobileSmall) {
+		line-height: 1;
+		padding-block: toRem(10);
+	}
 
 	@media (any-hover: hover) {
 		&:hover {
@@ -44,5 +51,23 @@
 
 	&--filter {
 		font-size: toRem(14);
+	}
+
+	&:has(span) {
+		display: flex;
+		column-gap: toRem(12);
+
+		span {
+			inline-size: toRem(24);
+			aspect-ratio: 1;
+			flex-shrink: 0;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&::before {
+				font-size: toRem(20);
+			}
+		}
 	}
 }

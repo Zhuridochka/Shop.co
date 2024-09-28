@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+@@include('html/_head.htm',{
+"title":"CartPage"
+})
+
+<body>
+  <div class="wrapper">
+    @@include('html/_header.htm',{})
+    <main class="cart">
+      <div class="cart__breadcrumbs breadcrumbs">
+        <div class="breadcrumbs__container">
+          <ul class="breadcrumbs__list">
+            <li class="breadcrumbs__item _icon-Frame">
+              <a href="#" class="breadcrumbs__link">Home</a>
+            </li>
+            <li class="breadcrumbs__item">Cart</li>
+          </ul>
+        </div>
+      </div>
+      <div class="cart__content content-cart">
+        <div class="content-cart__container">
+          <h1 class="content-cart__title title">Your cart</h1>
+          <form class="content-cart__form" data-dev method="POST" action="#">
+            <div class="content-cart__list">
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/like/image_02.png" alt="Image Gradient Graphic T-shirt">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">Gradient Graphic T-<span>shirt</span></a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Large</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">White</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$240</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/arrivals/image_03.png" alt="Image Checkered shirt">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">checkered shirt</a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Medium</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">Red</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$180</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/arrivals/image_02.png" alt="Image Skinny fit jeans">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">skinny fit jeans</a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Large</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">Blue</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$240</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/like/image_02.png" alt="Image Gradient Graphic T-shirt">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">Gradient Graphic T-<span>shirt</span></a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Large</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">White</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$240</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/arrivals/image_03.png" alt="Image Checkered shirt">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">checkered shirt</a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Medium</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">Red</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$180</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+              <article class="content-cart__item item-cart">
+                <div class="item-cart__body">
+                  <a href="#" class="item-cart__link">
+                    <img class="item-cart__img" src="@img/arrivals/image_02.png" alt="Image Skinny fit jeans">
+                  </a>
+                  <div class="item-cart__content">
+                    <div class="item-cart__top">
+                      <h4 class="item-cart__title">
+                        <a href="#" class="item-cart__title-link">skinny fit jeans</a>
+                      </h4>
+                      <button type="button" class="item-cart__trash _icon-bag"></button>
+                    </div>
+                    <div class="item-cart__data data-cart">
+                      <div class="data-cart__item">
+                        <label for="size-clothes" class="data-cart__label">Size:</label>
+                        <span id="size-clothes" name="size of clothes">Large</span>
+                      </div>
+                      <div class="data-cart__item">
+                        <label for="color-clothes" class="data-cart__label">Color:</label>
+                        <span id="color-clothes" name="color of clothes">Blue</span>
+                      </div>
+                    </div>
+                    <div class="item-cart__bottom">
+                      <div class="item-cart__price price-product">
+                        <div class="price-product__current">$240</div>
+                      </div>
+                      <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                        <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                        <div class="quantity__input">
+                          <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                        </div>
+                        <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </article>
+            </div>
+            <div class="content-cart__order order-cart">
+              <div class="order-cart__wrapper">
+                <h3 class="order-cart__title">Order Summary</h3>
+                <div class="order-cart__cost cost-order-cart">
+                  <ul class="cost-order-cart__items">
+                    <li class="cost-order-cart__item">
+                      <span class="cost-order-cart__name">Subtotal</span>
+                      <span class="cost-order-cart__price">$565</span>
+                    </li>
+                    <li class="cost-order-cart__item">
+                      <span class="cost-order-cart__name">Discount (-20%)</span>
+                      <span class="cost-order-cart__price"><span>-$113</span></span>
+                    </li>
+                    <li class="cost-order-cart__item">
+                      <span class="cost-order-cart__name">Delivery Fee</span>
+                      <span class="cost-order-cart__price">$15</span>
+                    </li>
+                  </ul>
+                </div>
+                <div class="order-cart__total total-order-cart">
+                  <span class="total-order-cart__name">Total</span>
+                  <span class="total-order-cart__price">$467</span>
+                </div>
+                <div class="order-cart__promo promo-cart">
+                  <div class="promo-cart__body">
+                    <input autocomplete="off" type="text" name="form[]" data-error="Помилка" placeholder="Add promo code" class="promo-cart__input input input--promo">
+                    <span class="promo-cart__icon _icon-promo"></span>
+                  </div>
+                  <button type="button" class="promo-cart__button button">Apply</button>
+                </div>
+                <button class="order-cart__button button" type="submit">Go to Checkout
+                  <span class=" _icon-arrow-right"></span>
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <section class="cart__offers offers-section">
+        <div class="offers-section__container">
+          <form class="offers-section__offers offers" action="#" enctype="multipart/form-data">
+            <h2 class="offers__title title title--white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+            <div class="offers__form">
+              <div class="offers__body">
+                <input autocomplete="off" type="email" name="form[mail]" data-error="Помилка" placeholder="Enter your email address" class="offers__input input input--white">
+                <span class="offers__icon _icon-envelope"></span>
+              </div>
+              <button class="offers__button button button--white" type="submit">Subscribe to Newsletter</button>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    @@include('html/_footer.htm',{})
+  </div>
+  @@include('html/_js.htm',{})
+</body>
+
+</html>

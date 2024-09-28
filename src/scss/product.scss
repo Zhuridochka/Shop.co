@@ -10,12 +10,8 @@
     &:not(:last-child) {
       margin-block-end: toRem(80);
 
-      @media (max-width:$mobile) {
-        margin-block-end: toRem(65);
-      }
-
-      @media (max-width:$mobileSmall) {
-        margin-block-end: toRem(50);
+      @media (max-width: $mobile) {
+        margin-block-end: toRem(5);
       }
     }
   }
@@ -59,7 +55,7 @@
     row-gap: toRem(20);
     justify-content: space-between;
 
-    @media (max-width: toEm(880)) {
+    @media (max-width: $mobile) {
       flex-direction: column;
     }
   }
@@ -68,12 +64,11 @@
   &__slider {
     inline-size: toRem(610);
     flex-basis: toRem(610);
-    flex-shrink: 0;
+    flex-shrink: 1;
     min-inline-size: 0;
 
     @media (max-width: toEm(1000)) {
       inline-size: 100%;
-      flex-shrink: 1;
     }
   }
 
@@ -115,7 +110,7 @@
 
 .previews-slider-product {
   overflow: hidden;
-  // block-size: toRem(200);
+  block-size: toRem(106);
 
   @media (min-width:toEm(1119)) {
     inline-size: toRem(152);
@@ -136,19 +131,19 @@
 
   // .previews-slider-product__slide
   &__slide {
-    flex-grow: 0;
-    inline-size: toRem(152);
-    block-size: toRem(167);
-    aspect-ratio: 152 / 167;
-    object-fit: cover;
+    overflow: hidden;
     border-radius: toRem(20);
     background-color: $mainColor10;
+
+    &.swiper-slide-thumb-active {
+      border: toRem(1) solid $mainColor;
+    }
   }
 
   // .previews-slider-product__image
   &__image {
     inline-size: 100%;
-    block-size: 100%;
+    aspect-ratio: 152 / 167;
     object-fit: cover;
     border-radius: toRem(20);
     background-color: #F0EEED;
@@ -168,29 +163,17 @@
   }
 
   // .main-slider-product__wrapper
-  &__wrapper {
-    @media (min-width:toEm(1119)) {
-      //block-size: 100%;
-    }
-  }
+  &__wrapper {}
 
   // .main-slider-product__slide
-  &__slide {
-    // inline-size: toRem(444);
-    // block-size: toRem(530);
-    block-size: 100%;
-    inline-size: 100%;
-    aspect-ratio: 444 / 530;
-    flex-shrink: 1;
-  }
+  &__slide {}
 
   // .main-slider-product__image
   &__image {
-    block-size: 100%;
-    inline-size: 100%;
+    block-size: toRem(530);
     aspect-ratio: 444 / 530;
-    //object-fit: contain;
     object-fit: cover;
+    max-inline-size: 100%;
   }
 }
 

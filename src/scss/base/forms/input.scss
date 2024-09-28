@@ -42,6 +42,29 @@ textarea {
 			font-size: toRem(20);
 		}
 	}
+
+	&--promo {
+		//position: relative;
+		display: inline-flex;
+		min-inline-size: toRem(326);
+		align-items: center;
+		flex-shrink: 0;
+		//column-gap: toRem(12);
+		background-color: $bgMain;
+		border-radius: toRem(62);
+		padding: toRem(12) toRem(16) toRem(12) toRem(52);
+
+		// &::before {
+		// 	position: absolute;
+		// 	inset-block-start: 0;
+		// 	inset-inline-start: 0;
+		// 	inline-size: toRem(24);
+		// 	flex-basis: toRem(24);
+		// 	flex-shrink: 0;
+		// 	color: hwb(0 0% 100% / 0.40);
+		// 	font-size: toRem(20);
+		// }
+	}
 }
 
 .input[placeholder]:not([data-placeholder-nohiden]) {

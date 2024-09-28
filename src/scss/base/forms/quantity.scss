@@ -10,9 +10,24 @@
 	padding-inline: toRem(20);
 	padding-block: toRem(16);
 
+	// .quantity--cart	
+	&--cart {
+		block-size: toRem(44);
+		inline-size: toRem(126);
+		padding-block: toRem(12);
+		justify-content: center;
+	}
+
+	@media (max-width:$mobileSmall) {
+		padding-block: toRem(12);
+		padding-inline: toRem(16);
+		block-size: toRem(44);
+	}
+
 	// .quantity__button
 	&__button {
-		flex: 0 0 20px;
+		inline-size: toRem(20);
+		flex: 0 0 toRem(20);
 		position: relative;
 		cursor: pointer;
 
@@ -27,6 +42,10 @@
 			background-color: $mainColor;
 			width: 16px;
 			height: 2px;
+
+			&--cart {
+				inline-size: toRem(10);
+			}
 		}
 
 		@media (any-hover: hover) {
@@ -48,6 +67,8 @@
 
 		// .quantity__button_minus
 		&--minus {}
+
+
 	}
 
 	// .quantity__input

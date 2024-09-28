@@ -148,6 +148,44 @@
         </div>
       </div>
 
+      <article class="item-cart">
+        <div class="item-cart__body">
+          <a href="#" class="item-cart__link">
+            <img class="item-cart__img" src="@img/arrivals/image_03.png" alt="Image Gradient Graphic T-shirt">
+          </a>
+          <div class="item-cart__content">
+            <div class="item-cart__top">
+              <h4 class="item-cart__title">
+                <a href="#" class="item-cart__title-link">Gradient Graphic T-<span>shirt</span></a>
+              </h4>
+              <button type="button" class="item-cart__trash _icon-bag"></button>
+            </div>
+            <div class="item-cart__data data-cart">
+              <div class="data-cart__item">
+                <label for="size-clothes" class="data-cart__label">Size:</label>
+                <span id="size-clothes" name="size of clothes">Large</span>
+              </div>
+              <div class="data-cart__item">
+                <label for="color-clothes" class="data-cart__label">Color:</label>
+                <span id="color-clothes" name="color of clothes">White</span>
+              </div>
+            </div>
+            <div class="item-cart__bottom">
+              <div class="item-cart__price price-product">
+                <div class="price-product__current">$240</div>
+              </div>
+              <div data-quantity class="item-cart__quantity quantity quantity--cart">
+                <button data-quantity-minus type="button" class="quantity__button quantity__button--minus"></button>
+                <div class="quantity__input">
+                  <input data-quantity-value autocomplete="off" type="text" name="form[]" value="1">
+                </div>
+                <button data-quantity-plus type="button" class="quantity__button quantity__button--plus"></button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </article>
+
     </main>
   </div>
   @@include('html/_js.htm',{})
