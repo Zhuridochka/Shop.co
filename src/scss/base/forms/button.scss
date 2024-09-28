@@ -53,6 +53,11 @@
 		font-size: toRem(14);
 	}
 
+	&--apl {
+		padding-block: toRem(13);
+		padding-inline: toRem(38);
+	}
+
 	&:has(span) {
 		display: flex;
 		column-gap: toRem(12);
