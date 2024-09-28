@@ -1,0 +1,658 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>CategoryPage</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.min.css?_v=20240928190838">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header class="header">
+			<div class="header__top top-header">
+				<div class="top-header__container">
+					<div class="top-header__box">
+						<div class="top-header__content">
+							<div class="top-header__column"></div>
+							<div class="top-header__text">
+								Sign up and get 20% off to your first order.
+								<a class="top-header__button" href="#">
+									Sign Up Now
+								</a>
+							</div>
+							<button class="top-header__icon _icon-close"></button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="header__main main-header">
+				<div class="main-header__container">
+					<button type="button" class="main-header__icon icon-menu"><span></span></button>
+					<a href="#" class="main-header__logo logo">SHOP.CO</a>
+					<div class="main-header__menu menu">
+						<nav class="menu__body">
+							<ul class="menu__list">
+								<li class="menu__item">
+									<a href="#" class="menu__link _icon-Frame">
+										Shop
+									</a>
+									<!-- <span class=" _icon-Frame"></span> -->
+									<ul class="menu__sublist menu-sublist">
+										<li class="menu-sublist__item">
+											<a class="menu-sublist__link" href="#">Submenu #1</a>
+										</li>
+										<li class="menu-sublist__item">
+											<a class="menu-sublist__link" href="#">Submenu #2</a>
+										</li>
+										<li class="menu-sublist__item">
+											<a class="menu-sublist__link" href="#">Submenu #3</a>
+										</li>
+									</ul>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										On Sale
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										New Arrivals
+									</a>
+								</li>
+								<li class="menu__item">
+									<a href="#" class="menu__link">
+										Brands
+									</a>
+								</li>
+							</ul>
+						</nav>
+					</div>
+					<form action="#" class="main-header__search search-header">
+						<button data-da=".main-header__actions,479.98,first" class="search-header__open">
+							<span class=" _icon-search"></span>
+							<span class=" _icon-close"></span>
+						</button>
+						<div class="search-header__body">
+							<input class="search-header__input" required autocomplete="off" type="text" name="form[data]" data-error="Помилка" placeholder="Search for products..." class="input">
+							<button type="submit" class="search-header__button _icon-search"></button>
+						</div>
+					</form>
+					<div class="main-header__actions actions-header">
+						<a href="#" class="actions-header__item _icon-cart"></a>
+						<a href="#" class="actions-header__item _icon-user"></a>
+					</div>
+				</div>
+			</div>
+
+		</header>
+		<main class="category">
+			<div class="category__breadcrumbs breadcrumbs">
+				<div class="breadcrumbs__container">
+					<ul class="breadcrumbs__list">
+						<li class="breadcrumbs__item _icon-Frame">
+							<a href="#" class="breadcrumbs__link">Home</a>
+						</li>
+						<li class="breadcrumbs__item">Casual</li>
+					</ul>
+				</div>
+			</div>
+			<div class="category__content content-category">
+				<div class="content-category__container">
+					<aside class="content-category__filter filter">
+						<div class="filter__header ">
+							<div class="filter__title">Filters</div>
+							<button class="filter__button-filtr filter-button">
+								<span class=" _icon-filter"></span>
+								<span class=" _icon-close"></span>
+							</button>
+						</div>
+						<div class="filter__body">
+							<ul class="filter__items sidebar-catalog">
+								<li class="sidebar-catalog__item ">
+									<a class="sidebar-catalog__link _icon-Frame" href="#">T-shirts</a>
+								</li>
+								<li class="sidebar-catalog__item">
+									<a class="sidebar-catalog__link _icon-Frame" href="#">Shorts</a>
+								</li>
+								<li class="sidebar-catalog__item">
+									<a class="sidebar-catalog__link _icon-Frame" href="#">Shirts</a>
+								</li>
+								<li class="sidebar-catalog__item">
+									<a class="sidebar-catalog__link _icon-Frame" href="#">Hoodie</a>
+								</li>
+								<li class="sidebar-catalog__item">
+									<a class="sidebar-catalog__link _icon-Frame" href="#">Jeans</a>
+								</li>
+							</ul>
+						</div>
+						<form action="#" data-spollers class="filter__form form-filter spollers">
+							<details data-open class="form-filter__item item-filter spollers__item">
+								<summary class="item-filter__header spollers__title spollers__title--filter">Price</summary>
+								<div class="item-filter__body filter-price spollers__body">
+									<div class="filter-price__range"></div>
+								</div>
+							</details>
+							<details data-open class="form-filter__item item-filter spollers__item">
+								<summary class="item-filter__header spollers__title spollers__title--filter">
+									<label for="color" title="Підказка" class="item-filter__label">Colors</label>
+								</summary>
+								<div class="item-filter__body filter-colors spollers__body">
+									<div class="filter-colors">
+										<div class="filter-colors__color color-options-product color-options-product--categ">
+											<div class="color-options-product--categ__items">
+												<label class="color-options-product--categ__item">
+													<input checked class="color-options-product--categ__input" type="checkbox" name="color">
+													<img class="color-options-product--categ__image" src="img/colors/ellipse_01.svg" alt="color 01">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_02.svg" alt="color 02">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_03.svg" alt="color 03">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_04.svg" alt="color 04">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_05.svg" alt="color 05">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_06.svg" alt="color 06">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_07.svg" alt="color 07">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_08.svg" alt="color 08">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_09.svg" alt="color 09">
+												</label>
+												<label class="color-options-product--categ__item">
+													<input class="color-options-product--categ__input" type="checkbox" name="color">
+													<img src="img/colors/ellipse_10.svg" alt="color 10">
+												</label>
+											</div>
+										</div>
+									</div>
+								</div>
+							</details>
+							<details data-open class="form-filter__item item-filter spollers__item">
+								<summary class="item-filter__header spollers__title spollers__title--filter">
+									<label for="size" title="Підказка" class="item-filter__label">Size</label>
+								</summary>
+								<div class="item-filter__body filter-size spollers__body">
+									<div class="filter-size__size options-product">
+										<div class="options-product__size options">
+											<div class="options__item">
+												<input id="o_1" class="options__input" type="checkbox" value="1" name="option">
+												<label for="o_1" class="options__label"><span class="options__text">XX-Small</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_2" class="options__input" type="checkbox" value="2" name="option">
+												<label for="o_2" class="options__label"><span class="options__text">X-Small</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_3" class="options__input" type="checkbox" value="3" name="option">
+												<label for="o_3" class="options__label"><span class="options__text">Small</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_4" class="options__input" type="radio" value="4" name="option">
+												<label for="o_4" class="options__label"><span class="options__text">Medium</span></label>
+											</div>
+											<div class="options__item">
+												<input checked id="o_5" class="options__input" type="radio" value="5" name="option">
+												<label for="o_5" class="options__label"><span class="options__text">Large</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_6" class="options__input" type="radio" value="6" name="option">
+												<label for="o_6" class="options__label"><span class="options__text">X-Large</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_7" class="options__input" type="radio" value="7" name="option">
+												<label for="o_7" class="options__label"><span class="options__text">XX-Large</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_8" class="options__input" type="radio" value="8" name="option">
+												<label for="o_8" class="options__label"><span class="options__text">3X-Large</span></label>
+											</div>
+											<div class="options__item">
+												<input id="o_9" class="options__input" type="radio" value="9" name="option">
+												<label for="o_9" class="options__label"><span class="options__text">4X-Large</span></label>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</details>
+							<details data-open class="form-filter__item item-filter spollers__item">
+								<summary class="item-filter__header spollers__title spollers__title--filter">Dress Style</summary>
+								<div class="item-filter__body">
+									<ul class="item-filter__items sidebar-catalog">
+										<li class="sidebar-catalog__item ">
+											<a class="sidebar-catalog__link _icon-Frame" href="#">Casual</a>
+										</li>
+										<li class="sidebar-catalog__item">
+											<a class="sidebar-catalog__link _icon-Frame" href="#">Formal</a>
+										</li>
+										<li class="sidebar-catalog__item">
+											<a class="sidebar-catalog__link _icon-Frame" href="#">Party</a>
+										</li>
+										<li class="sidebar-catalog__item">
+											<a class="sidebar-catalog__link _icon-Frame" href="#">Gym</a>
+										</li>
+									</ul>
+								</div>
+							</details>
+							<button type="submit" class="form-filter__button button button--filter">Apply Filter</button>
+						</form>
+					</aside>
+					<section class="content-category__body body-category">
+						<div class="body-category__header header-body-category">
+							<h2 class="header-body-category__title">Casual</h2>
+							<div class="header-body-category__sort sort-category">
+								<div class="sort-category__showing">Showing 1-10 of 100 Products</div>
+								<form class="sort-category__form" action="#">
+									<label class="sort-category__text">Sort by:</label>
+									<select class="select" name="popular[]" data-class-modif="popular">
+										<option value="Most Popular" selected>Most Popular</option>
+										<option value="2">Point №2</option>
+										<option value="3">Point №3</option>
+										<option value="4">Point №4</option>
+									</select>
+								</form>
+							</div>
+							<button class="header-body-category__button-filtr filter-button">
+								<span class=" _icon-filter"></span>
+								<span class=" _icon-close"></span>
+							</button>
+						</div>
+						<div class="body-category__list">
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/like/image_02.webp" alt="Image Gradient Graphic T-shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">Gradient Graphic T-<span>shirt</span></a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star stars-raiting__star--star05"></div>
+										</div>
+										<div class="opinion__number">3.5/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$145</div>
+									<!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/like/image_03.webp" alt="Image Polo with Tipping Details">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">Polo with Tipping Details</a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star stars-raiting__star--star05"></div>
+										</div>
+										<div class="opinion__number">4.5/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$180</div>
+									<!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/like/image_04.webp" alt="Image Black Striped T-shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">Black Striped T-<span>shirt</span></a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+										</div>
+										<div class="opinion__number">5.0/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$120</div>
+									<div class="price-product__old">$150</div>
+									<div class="price-product__persent">-30%</div>
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/arrivals/image_02.webp" alt="Image skinny fit jeans">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">skinny fit jeans</a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star stars-raiting__star--star05"></div>
+										</div>
+										<div class="opinion__number">3.5/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$240</div>
+									<div class="price-product__old">$260</div>
+									<div class="price-product__persent">-20%</div>
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/arrivals/image_03.webp" alt="Image checkered shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">checkered shirt</a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star stars-raiting__star--star05"></div>
+										</div>
+										<div class="opinion__number">4.5/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$180</div>
+									<!-- <div class="price-product__old">$260</div>
+                  <div class="price-product__persent">-20%</div> -->
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/arrivals/image_04.webp" alt="Image sleeve striped t-shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">sleeve striped t-<span>shirt</span></a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star stars-raiting__star--star05"></div>
+										</div>
+										<div class="opinion__number">4.5/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$130</div>
+									<div class="price-product__old">$160</div>
+									<div class="price-product__persent">-30%</div>
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/selling/image_01.webp" alt="Image vertical striped shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">vertical striped shirt</a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+										</div>
+										<div class="opinion__number">5.0/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$212</div>
+									<div class="price-product__old">$232</div>
+									<div class="price-product__persent">-20%</div>
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/selling/image_02.webp" alt="Image vertical striped shirt">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">courage graphic t-<span>shirt</span></a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+										</div>
+										<div class="opinion__number">4.0/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$145</div>
+									<!-- <div class="price-product__old">$232</div>
+                  <div class="price-product__persent">-20%</div> -->
+								</div>
+							</article>
+							<article class="body-category__item item-product">
+								<a href="#" class="item-product__link">
+									<img class="item-product__image" src="img/selling/image_03.webp" alt="Image loose fit bermuda shorts">
+								</a>
+								<div class="item-product__content">
+									<h4 class="item-product__title">
+										<a href="#" class="item-product__title-link">loose fit bermuda shorts</a>
+									</h4>
+									<div class="item-product__opinion opinion">
+										<div class="opinion__rating stars-raiting">
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+											<div class="stars-raiting__star"></div>
+										</div>
+										<div class="opinion__number">3.0/5</div>
+									</div>
+								</div>
+								<div class="item-product__price price-product">
+									<div class="price-product__current">$80</div>
+									<!-- <div class="price-product__old">$232</div>
+                  <div class="price-product__persent">-20%</div> -->
+								</div>
+							</article>
+						</div>
+						<div class="body-category__pages pages-body-category">
+							<div class="pages-body-category__previous">
+								<a class="pages-body-category__previous-link _icon-arrow-left" href="#">Previous</a>
+							</div>
+							<ul class="pages-body-category__list">
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">1</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">2</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">3</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">...</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">8</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">9</a>
+								</li>
+								<li class="pages-body-category__item">
+									<a class="pages-body-category__link" href="#">10</a>
+								</li>
+							</ul>
+							<div class="pages-body-category__next">
+								<a class="pages-body-category__next-link _icon-arrow-right" href="#">Next</a>
+							</div>
+						</div>
+					</section>
+				</div>
+			</div>
+			<section class="category__offers offers-section">
+				<div class="offers-section__container">
+					<form class="offers-section__offers offers" action="#" enctype="multipart/form-data">
+						<h2 class="offers__title title title--white">STAY UPTO DATE ABOUT OUR LATEST OFFERS</h2>
+						<div class="offers__form">
+							<div class="offers__body">
+								<input autocomplete="off" type="email" name="form[mail]" data-error="Помилка" placeholder="Enter your email address" class="offers__input input input--white">
+								<span class="offers__icon _icon-envelope"></span>
+							</div>
+							<button class="offers__button button button--white" type="submit">Subscribe to Newsletter</button>
+						</div>
+					</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer">
+			<div class="footer__container">
+				<div class="footer__main main-footer">
+					<div class="main-footer__body">
+						<div class="main-footer__content">
+							<a href="#" class="main-footer__logo logo">
+								SHOP.CO
+							</a>
+							<div class="main-footer__text">
+								<p>
+									We have clothes that suits your style and which you’re proud to wear. From women to men.
+								</p>
+							</div>
+							<div class="main-footer__social social">
+								<ul class="social__list">
+									<li class="social__item">
+										<a href="#" class="social__link _icon-s-twitter"></a>
+									</li>
+									<li class="social__item">
+										<a href="#" class="social__link _icon-s-facebook"></a>
+									</li>
+									<li class="social__item">
+										<a href="#" class="social__link _icon-s-insta"></a>
+									</li>
+									<li class="social__item">
+										<a href="#" class="social__link _icon-s-github"></a>
+									</li>
+								</ul>
+							</div>
+
+						</div>
+						<div data-spollers="319.98,max" class="main-footer__spollers spollers">
+							<details class="spollers__item">
+								<summary class="spollers__title">Company</summary>
+								<a href="#" class="spollers__body">About</a>
+								<a href="#" class="spollers__body">Features</a>
+								<a href="#" class="spollers__body">Works</a>
+								<a href="#" class="spollers__body">Career</a>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">FAQ</summary>
+								<a href="#" class="spollers__body">Account</a>
+								<a href="#" class="spollers__body">Manage Deliveries</a>
+								<a href="#" class="spollers__body">Orders</a>
+								<a href="#" class="spollers__body">Payments</a>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Help</summary>
+								<a href="#" class="spollers__body">Customer Support</a>
+								<a href="#" class="spollers__body">Delivery Details</a>
+								<a href="#" class="spollers__body">Terms & Conditions</a>
+								<a href="#" class="spollers__body">Privacy Policy</a>
+							</details>
+							<details class="spollers__item">
+								<summary class="spollers__title">Resources</summary>
+								<a href="#" class="spollers__body">Free eBooks</a>
+								<a href="#" class="spollers__body">Development Tutorial</a>
+								<a href="#" class="spollers__body">How to - Blog</a>
+								<a href="#" class="spollers__body">Youtube Playlist</a>
+							</details>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="footer__bottom bottom-footer">
+				<div class="bottom-footer__container">
+					<div class="bottom-footer__body">
+						<div class="bottom-footer__text">Shop.co © 2000-2023, All Rights Reserved</div>
+						<ul class="bottom-footer__list">
+							<li class="bottom-footer__item">
+								<a href="#" class="bottom-footer__link">
+									<img class="bottom-footer__image" src="img/footer/visa.webp" alt="Image Visa">
+								</a>
+							</li>
+							<li class="bottom-footer__item">
+								<a href="#" class="bottom-footer__link">
+									<img class="bottom-footer__image" src="img/footer/mastercard.webp" alt="Image Master Card">
+								</a>
+							</li>
+							<li class="bottom-footer__item">
+								<a href="#" class="bottom-footer__link">
+									<img class="bottom-footer__image" src="img/footer/paypal.webp" alt="Image PayPal">
+								</a>
+							</li>
+							<li class="bottom-footer__item">
+								<a href="#" class="bottom-footer__link">
+									<img class="bottom-footer__image" src="img/footer/pay.webp" alt="Image Pay">
+								</a>
+							</li>
+							<li class="bottom-footer__item">
+								<a href="#" class="bottom-footer__link">
+									<img class="bottom-footer__image" src="img/footer/g_pay.webp" alt="Image GooglePay">
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
+	<script src="js/app.min.js?_v=20240928190838"></script>
+</body>
+
+</html>
