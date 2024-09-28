@@ -153,6 +153,10 @@
     column-gap: toRem(20);
     margin-block-end: toRem(20);
     font-size: toRem(20);
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(16);
+    }
   }
 
   // .cost-order-cart__name
@@ -185,15 +189,16 @@
   &__price {
     font-size: toRem(24);
     font-weight: 700;
+
+    @media (max-width:$mobileSmall) {
+      font-size: toRem(20);
+    }
   }
 }
 
 .promo-cart {
   display: grid;
-  grid-template-columns: 1fr 119px;
-  // display: flex;
-  // align-items: center;
-  // justify-content: space-between;
+  grid-template-columns: 1fr toRem(119);
   column-gap: toRem(12);
 
   // .promo-cart__body  
@@ -221,7 +226,6 @@
       font-size: toRem(20);
       font-weight: 500;
     }
-
   }
 
   // .promo-cart__button
