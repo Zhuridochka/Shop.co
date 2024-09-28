@@ -122,46 +122,46 @@
 
   // .filter__button-filtr
   &__button-filtr {
-    inline-size: toRem(24);
-    block-size: toRem(24);
-    aspect-ratio: 1;
-    flex-shrink: 0;
+    // inline-size: toRem(24);
+    // block-size: toRem(24);
+    // aspect-ratio: 1;
+    // flex-shrink: 0;
 
-    span {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.4s;
+    // span {
+    //   display: flex;
+    //   align-items: center;
+    //   justify-content: center;
+    //   transition: all 0.4s;
 
-      &::before {
-        inline-size: toRem(24);
-        aspect-ratio: 1;
-        flex-shrink: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: $mainColor60;
-        font-size: toRem(20);
-      }
+    //   &::before {
+    //     inline-size: toRem(24);
+    //     aspect-ratio: 1;
+    //     flex-shrink: 0;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     color: $mainColor60;
+    //     font-size: toRem(20);
+    //   }
 
-      &:first-child {}
+    //   &:first-child {}
 
-      &:last-child {
-        transform: translate(0, 0) scale(0);
-      }
-    }
+    //   &:last-child {
+    //     transform: translate(0, 0) scale(0);
+    //   }
+    // }
 
-    .filter-open & {
-      span {
-        &:first-child {
-          transform: translate(0, -100%) scale(0);
-        }
+    // .filter-open & {
+    //   span {
+    //     &:first-child {
+    //       transform: translate(0, -100%) scale(0);
+    //     }
 
-        &:last-child {
-          transform: translate(0, -100%) scale(1);
-        }
-      }
-    }
+    //     &:last-child {
+    //       transform: translate(0, -100%) scale(1);
+    //     }
+    //   }
+    // }
   }
 
   // .filter__body
@@ -348,10 +348,23 @@
 
   // .header-body-category__sort
   &__sort {}
+
+  // .header-body-category__button-filtr
+  &__button-filtr {
+    display: none;
+
+    @media (max-width:$mobile) {
+      display: flex;
+    }
+  }
 }
+
 
 .sort-category {
   display: flex;
+  flex-wrap: wrap;
+  row-gap: toRem(10);
+  justify-content: end;
   align-items: center;
   column-gap: toRem(16);
 
