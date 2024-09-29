@@ -242,8 +242,21 @@ function windowLoaded() {
       }
     });
   }
-
   closeTopHeader();
+
+  // Визначення висоти Header
+  function updateHeaderHeight() {
+    const header = document.querySelector(".header");
+    if (!header) return;
+    const headerTop = document.querySelector(".header__top");
+    const headerHeight = header.offsetHeight;
+    const allMainElements = document.querySelectorAll("main");
+
+    allMainElements.forEach((main) => {
+      main.style.paddingBlockStart = `${headerHeight}px`;
+    });
+  }
+  updateHeaderHeight();
 
   document.addEventListener("click", documentActions);
   // document.addEventListener("keydown", keypressActions);

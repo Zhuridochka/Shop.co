@@ -1,4 +1,20 @@
 .header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 50;
+
+  &._header-scroll {
+    position: fixed;
+    inset-block-start: -200%;
+  }
+
+  &._header-show {
+    transition: top 0.4s ease 0s;
+    inset-block-start: 0;
+  }
+
   .filter-open & {
     &::before {
       content: "";
@@ -96,6 +112,7 @@
 .main-header {
   position: relative;
   z-index: 2;
+  background-color: #fff;
 
   // .main-header__container
   &__container {
