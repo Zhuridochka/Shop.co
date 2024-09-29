@@ -69,24 +69,7 @@
 			align-items: center;
 			column-gap: toRem(4);
 
-			span {
-				&::before {
-					inline-size: toRem(16);
-					flex-basis: toRem(16);
-					aspect-ratio: 1;
-					flex-shrink: 0;
-					display: flex;
-					align-items: center;
-					justify-content: center;
-					font-size: toRem(15);
-					transition: all 0.6s;
-					transform: rotate(0);
-				}
 
-				.shop-open & {
-					transform: rotate(180deg);
-				}
-			}
 
 			@media (max-width:$mobile) {
 				display: flex;
@@ -94,17 +77,19 @@
 			}
 		}
 
-		@media (any-hover: hover) {
-			&:hover {
-				.menu__link {
-					text-decoration: underline;
+		&:not(:first-child) {
+			@media (any-hover: hover) {
+				&:hover {
+					.menu__link {
+						text-decoration: underline;
+
+						// &::before {
+						// 	text-decoration: none;
+						// }
+					}
 				}
 			}
 		}
-
-		// .rotate-icon {
-		// 	transform: rotate(180deg);
-		// }
 	}
 
 	// .menu__link
@@ -113,12 +98,28 @@
 		/* 22/16 */
 		transition: all 0.8s;
 		display: flex;
+		//flex-direction: row-reverse;
 		align-items: center;
 		column-gap: toRem(4);
-		flex-direction: row-reverse;
 
-		@media (max-width:$mobile) {
-			display: flex;
+
+		span {
+			&::before {
+				inline-size: toRem(16);
+				flex-basis: toRem(16);
+				aspect-ratio: 1;
+				flex-shrink: 0;
+				display: flex;
+				align-items: center;
+				justify-content: center;
+				font-size: toRem(15);
+				transition: all 0.6s;
+				transform: rotate(0);
+
+				.shop-open & {
+					transform: rotate(180deg);
+				}
+			}
 		}
 	}
 

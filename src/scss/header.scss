@@ -80,6 +80,12 @@
   &__icon {
     justify-self: flex-end;
 
+    @media (any-hover: hover) {
+      &:hover {
+        color: #ffffffbb;
+      }
+    }
+
     @media (max-width:$mobile) {
       display: none;
     }
