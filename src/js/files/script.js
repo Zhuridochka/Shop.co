@@ -25,13 +25,6 @@ function windowLoaded() {
       document.documentElement.classList.remove("search-open");
     }
 
-    //* Подія при кліку для відкриття списку у об'єкта Sale в меню
-    if (targetElement.closest(".menu__item")) {
-      document.documentElement.classList.toggle("shop-open");
-    } else if (!targetElement.closest(".menu__item")) {
-      document.documentElement.classList.remove("shop-open");
-    }
-
     //* Подія при кліку на кнопку фільтру для показу секції Filter
     if (targetElement.closest(".filter-button")) {
       if (window.innerWidth < 768) {
@@ -168,51 +161,21 @@ function windowLoaded() {
     });
   }
 
-  //* Функція для відкриття списку у об'єкта Sale в меню
-  /*const menuItems = document.querySelectorAll(".menu__item");
+  //* Подія при кліку для відкриття списку у об'єкта Sale в меню
+  document.addEventListener("click", function (e) {
+    const targetElement = e.target;
 
-  Перевіряємо, чи є хоча б один елемент з класом .menu__item
-  if (menuItems.length > 0) {
-    menuItems.forEach((menuItem) => {
-      const icon = document.querySelector(".menu__item span");
-      const menuSublist = document.querySelector(".menu__sublist");
+    // Перевіряємо, чи натиснуто на перший пункт меню (Shop)
+    const shopMenuItem = document.querySelector(".menu__item:first-child");
 
-      // Функція для перемикання класів __open та __close
-      function toggleMenuSublist() {
-        if (menuSublist.classList.contains("menu-sublist__close")) {
-          menuSublist.classList.remove("menu-sublist__close");
-          menuSublist.classList.add("menu-sublist__open");
-
-          icon.classList.add("rotate-icon");
-        } else if (menuSublist.classList.contains("menu-sublist__open")) {
-          menuSublist.classList.remove("menu-sublist__open");
-          menuSublist.classList.add("menu-sublist__close");
-
-          icon.classList.remove("rotate-icon");
-        }
-      }
-
-      // Клік по галочці - показати/сховати список
-      menuItem.addEventListener("click", function (event) {
-        event.stopPropagation(); // Запобігаємо спрацюванню обробника для кліка поза списком
-        toggleMenuSublist();
-      });
-
-      //Закриття списку при кліку по галочці і поза межами списку
-      document.addEventListener("click", function (event) {
-        if (
-          !menuSublist.contains(event.target) &&
-          !menuItem.contains(event.target) &&
-          !icon.contains(event.target)
-        ) {
-          menuSublist.classList.remove("menu-sublist__open");
-          menuSublist.classList.add("menu-sublist__close");
-          icon.classList.remove("rotate-icon");
-        }
-      });
-    });
-  }
-    */
+    if (shopMenuItem.contains(targetElement)) {
+      // Додаємо або забираємо клас shop-open до document.documentElement
+      document.documentElement.classList.toggle("shop-open");
+    } else {
+      // Якщо клік поза пунктом меню "Shop", прибираємо клас
+      document.documentElement.classList.remove("shop-open");
+    }
+  });
 
   //* Подія для видалення карток товарів з корзини при натисканні на кнопку смітника
   const deleteButtons = document.querySelectorAll(".item-cart__trash");
