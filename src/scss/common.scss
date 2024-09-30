@@ -7,8 +7,12 @@
   font-weight: 700;
   margin-block-start: toRem(-8);
 
+  @media (max-width: toEm(900)) {
+    font-size: toRem(26);
+  }
+
   @media (max-width:$mobile) {
-    font-size: toRem(28);
+    // font-size: toRem(28);
     margin-block-start: toRem(-6);
     position: relative;
     z-index: 5;

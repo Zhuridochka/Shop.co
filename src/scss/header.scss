@@ -265,6 +265,10 @@
   position: relative;
   z-index: 5;
 
+  @media (max-width: toEm(900)) {
+    column-gap: toRem(10);
+  }
+
   // .actions-header__item
   &__item {
     display: flex;
