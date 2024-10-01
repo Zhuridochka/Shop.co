@@ -14,7 +14,7 @@ textarea {
 	width: 100%;
 	display: block;
 	padding: 12px 16px;
-	// border: 1px solid #eee;
+	//border: 1px solid #eee;
 	caret-color: inherit;
 
 	&._form-focus {}
@@ -46,8 +46,6 @@ textarea {
 	&--promo {
 		display: flex;
 		flex-basis: toRem(10);
-		// max-block-size: toRem(280);
-		// min-inline-size: toRem(190);
 		align-items: center;
 		flex-shrink: 0;
 		flex-grow: 1;
@@ -66,6 +64,7 @@ textarea {
 	&:focus::placeholder {
 		opacity: 0;
 	}
+
 }
 
 textarea.input {

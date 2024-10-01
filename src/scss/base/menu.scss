@@ -140,6 +140,10 @@
 	padding: toRem(10) toRem(15);
 	border-radius: toRem(8);
 
+	@media (max-width:$mobile) {
+		transition: all 0s;
+	}
+
 	// .menu-sublist__open
 	.shop-open & {
 		opacity: 1;

@@ -124,6 +124,7 @@
 
     @media (max-width:$tablet) {
       column-gap: toRem(20);
+      //padding-block-start: toRem(10);
     }
 
     @media (max-width:$mobileSmall) {
@@ -205,9 +206,11 @@
     align-items: center;
     column-gap: toRem(12);
     flex-direction: row-reverse;
-    padding-block: toRem(12);
+    padding-block: toRem(7);
     padding-inline: toRem(16);
     transition: all 0.4s;
+    position: relative;
+    z-index: 5;
 
     @media (any-hover: hover) {
       &:hover {
@@ -229,7 +232,7 @@
       background-color: #fff;
       outline: toRem(1) solid $mainColor60;
       padding-inline: toRem(10);
-      padding-block: toRem(10);
+      padding-block: toRem(5);
       margin-inline-start: toRem(10);
       opacity: 0;
       visibility: hidden;
@@ -242,7 +245,10 @@
   }
 
   // .search-header__input
-  &__input {}
+  &__input {
+    padding-inline-start: toRem(10);
+    padding-block: toRem(5);
+  }
 
   // .search-header__button
   &__button {
