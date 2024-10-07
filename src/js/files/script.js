@@ -216,7 +216,7 @@ function windowLoaded() {
     const allMainElements = document.querySelectorAll("main");
 
     allMainElements.forEach((main) => {
-      main.style.paddingBlockStart = `${headerHeight}px`;
+      main.style.marginBlockStart = `${headerHeight}px`;
     });
   }
   updateHeaderHeight();
